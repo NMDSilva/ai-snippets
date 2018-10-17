@@ -2,4 +2,4 @@
 All notable changes to the "aisnippets" extension will be documented in this file.
 
 ## [1.0.0]
-- Initial release of AI-Snippets
+- Release inicial AI-Snippets
