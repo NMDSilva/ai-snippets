@@ -23,8 +23,7 @@
             "\tcancelEvent: function(obj, args){ args.complete(); }",
             "});",
             "${3:$('#JmodelCancel').hide();}",
-            "${4:$('#JmodelOK').hide();}",
-            "$5"
+            "${4:$('#JmodelOK').hide();}"
         ],
         "description": "Javascript para criação de uma janela de jmodal"
     },
