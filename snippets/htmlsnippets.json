@@ -1,0 +1,333 @@
+{
+    "Fechar HTML": {
+        "prefix": "AI-fecharhtml",
+        "body": [
+            "<div class=\"linhaseparadora\">",
+            "\t<div class=\"floatleft margin-l-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\" /></div>",
+            "\t<div class=\"floatright margin-r-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\" /></div>",
+            "</div>"
+        ],
+        "description": "HTML com setas indicadores para fechar div"
+    },
+    "Separador Formulário": {
+        "prefix": "AI-form-separador",
+        "body": "<li class=\"FormSeparador\" title=\"${1:Titulo Separador}\"><label><i class=\"fa fa-search margin-r-5\"/>${1:Titulo Separador}</label></li>",
+        "description": "Separador de secção de formulário"
+    },
+    "Inputs Distrito, Concelho e Freguesia": {
+        "prefix": "AI-form-ilha-concelho-freguesia",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:id_distrito}\">${2:Ilha}</label>",
+            "\t<select id=\"<%=App%>_${1:id_distrito}\" name=\"${1:id_distrito}\" data-tipo=\"select\" data-tabela=\"Distritos\" data-ordenar=\"Distrito\" data-filtro=\"acores\" data-vfiltro=\"1\" data-filho=\"<%=App%>_${6:id_concelho}\" ${3:class=\"obrigatorio\"} ${4:data-selecionado=\"<%=${1:id_distrito}%>\"}><option value=\"\">A Carregar...</option></select>",
+            "</li>",
+            "<li>",
+            "\t<label for=\"<%=App%>_${6:id_concelho}\">${7:Concelho}</label>",
+            "\t<select id=\"<%=App%>_${6:id_concelho}\" name=\"${6:id_concelho}\" data-tipo=\"select\" data-tabela=\"Concelhos\" data-ordenar=\"Concelho\" data-filtro=\"IdDistrito\" data-vfiltro=\"\" data-filho=\"<%=App%>_${11:id_freguesia}\" ${8:class=\"obrigatorio\"} ${9:data-selecionado=\"<%=${6:id_concelho}%>\"}><option value=\"\">Por favor escolha a Ilha...</option></select>",
+            "</li>",
+            "<li>",
+            "\t<label for=\"<%=App%>_${11:id_freguesia}\">${12:Freguesia}</label>",
+            "\t<select id=\"<%=App%>_${11:id_freguesia}\" name=\"${11:id_freguesia}\" data-tipo=\"select\" data-tabela=\"Freguesias\" data-ordenar=\"Freguesia\" data-filtro=\"IdConcelho\" data-vfiltro=\"\" ${13:class=\"obrigatorio\"} ${14:data-selecionado=\"<%=${11:id_freguesia}%>\"}><option value=\"\">Por favor escolha a Concelho...</option></select>",
+            "</li>",
+            "$15"
+        ],
+        "description": "HTML para formulário, campos distrito, concelho e freguesia já encadeados"
+    },
+    "Input Select": {
+        "prefix": "AI-form-select",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_$1\">${2:Select}</label>",
+            "\t<select id=\"<%=App%>_$1\" name=\"$1\" class=\"obrigatorio\" data-tipo=\"select\" data-tabela=\"${3:tabela}\" data-ordenar=\"${4:campo_ordenar}\" ${5:data-tipoordenar=\"asc\" data-filtro=\"\" data-vfiltro=\"\" data-id=\"\" data-value=\"\" }data-selecionado=\"<%=$1%>\"><option value=\"\">A Carregar...</option></select>",
+            "</li>",
+            "$6"
+        ],
+        "description": "HTML para formulário, select para tabela"
+    },
+    "Input Select Sim Não": {
+        "prefix": "AI-form-select-simnao",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:id_select}\">${2:Select}</label>",
+            "\t<select id=\"<%=App%>_${1:id_select}\" name=\"${1:id_select}\" ${3:class=\"obrigatorio\"} data-tipo=\"select\" data-selecionado=\"<%=${1:id_select}%>\">",
+            "\t\t<option value=\"\">Escolha um item...</option>",
+            "\t\t<option value=\"0\">Não</option>",
+            "\t\t<option value=\"1\">Sim</option>",
+            "\t</select>",
+            "</li>",
+            "$4"
+        ],
+        "description": "HTML para formulário, select com Sim e Não"
+    },
+    "Input Geral": {
+        "prefix": "AI-form-geral",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_$1\">${2:Titulo Campo}</label>",
+            "\t<input type=\"text\" id=\"<%=App%>_$1\" name=\"$1\" data-tipo=\"${3|texto,km,moeda,decimal,ano,numerico,data,hora,datahora,datahoraseparados,matricula,idcodpostal,codpostal,nif,niss,cae,nib,telefone,fax,email,artigo|}\" class=\"${4:obrigatorio}\" ${5: data-preenchimento=\"<%=$1%>\"}/>",
+            "\t${6:<div class=\"descricao\">${7:Valor Informativo}</div>}",
+            "</li>",
+            "$8"
+        ],
+        "description": "HTML para formulário, input generico"
+    },
+    "Input Data Nascimento": {
+        "prefix": "AI-form-data-nascimento-com-idade",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:idcampo}\">${2:Titulo Campo}</label>",
+            "\t<input type=\"text\" id=\"<%=App%>_${1:idcampo}\" name=\"${1:idcampo}\" data-tipo=\"data\"${3: class=\"obrigatorio\"} data-preenchimento=\"<%=${1:idcampo}%>\"${4: data-calcularidade=\"<%=App%>_${6:idade}\"}/>",
+            "</li>",
+            "${5:<li>",
+            "\t<label>${7:Idade}</label>",
+            "\t<b><span class=\"leitura\" id=\"<%=App%>_${6:idade}\">-</span></b>",
+            "</li>}",
+            "$8"
+        ],
+        "description": "HTML para formulário, input data de nascimento com idade"
+    },
+    "Input NISSWS": {
+        "prefix": "AI-form-nissws",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:idcampo}\">${2:Titulo Campo}</label>",
+            "\t<input type=\"text\" id=\"<%=App%>_${1:idcampo}\" name=\"${1:idcampo}\" data-tipo=\"nissws\" data-retorno=\"${3:NIF|NOME|DATNAS|SEXO|NDOCID|MORADA|DISTRITO|CONCELHO|FREGUESIA|CODPOSTAL|NOMEPAI|NOMEMAE}\" data-campos=\"${4:campos}\" data-disabledretorno=\"${5:true|false}\"${6: class=\"obrigatorio\"}${7: data-preenchimento=\"<%=${1:idcampo}%>\"}/>",
+            "</li>",
+            "$8"
+        ],
+        "description": "HTML para formulário, input NISS WS"
+    },
+    "Input NIFWS": {
+        "prefix": "AI-form-nifws",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:idcampo}\">${2:Titulo Campo}</label>",
+            "\t<input type=\"text\" id=\"<%=App%>_${1:idcampo}\" name=\"${1:idcampo}\" data-tipo=\"nifws\" data-campo=\"${3:id_campo_niss}\"${4: class=\"obrigatorio\"}${5: data-preenchimento=\"<%=${1:idcampo}%>\"}/>",
+            "</li>",
+            "$6"
+        ],
+        "description": "HTML para formulário, input NIF WS"
+    },
+    "Input Sexo": {
+        "prefix": "AI-form-sexo",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:idcampo}\">${2:Titulo Campo}</label>",
+            "\t<select id=\"<%=App%>_${1:idcampo}\" name=\"${1:idcampo}\" data-tipo=\"select\"${3: class=\"obrigatorio\"} data-preenchimento=\"<%=${1:idcampo}%>\">",
+            "\t\t<option value=\"\">Escolha um Item...</option>",
+            "\t\t<option value=\"F\">Feminino</option>",
+            "\t\t<option value=\"M\">Masculino</option>",
+            "\t</select>",
+            "</li>",
+            "$4"
+        ],
+        "description": "HTML para formulário, select Feminino e Masculino"
+    },
+    "Input Upload": {
+        "prefix": "AI-form-upload",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=App%>_${1:idcampo}\">${2:Titulo Campo}</label>",
+            "\t<input id=\"<%=App%>_${1:idcampo}\" name=\"${1:idcampo}\" type=\"file\" data-tipo=\"upload\" data-extensoes=\"${3:png|jpeg|jpg|gif}\"${4: class=\"obrigatorio\"} />",
+            "</li>",
+            "$5"
+        ],
+        "description": "HTML para formulário, input upload"
+    },
+    "Input Radio ou Checkbox": {
+        "prefix": "AI-form-radio-checkbox",
+        "body": [
+            "<li>",
+            "\t<fieldset data-tipo=\"${2|radio,checkbox|}\" ${3: class=\"obrigatorio\"}${4: data-outra=\"${5:Texto Outra}\"} data-preenchimento=\"<%=${6:idcampo}%>\">",
+            "\t\t<legend>${7:Titulo}:</legend>",
+            "\t\t<span class=\"fieldset\">",
+            "\t\t\t(div>input[type=${2|radio,checkbox|}][name=\"${6:idcampo}\"][id=\"<%=${1:App}%>_${6:idcampo}_\\$\"][value=\"\"]+label[for=\"<%=${1:App}%>_${6:idcampo}_\\$\"])*${8:4}",
+            "\t\t</span>",
+            "\t</fieldset>",
+            "</li>"
+        ],
+        "description": "HTML para formulário, input radio ou checkbox com código Emmet para varias opções"
+    },
+    "Input Radio Sim Nao": {
+        "prefix": "AI-form-radio-simnao",
+        "body": [
+            "<li>",
+            "\t<fieldset data-tipo=\"radio\"${2: class=\"obrigatorio\"} data-preenchimento=\"<%=${3:idcampo}%>\">",
+            "\t\t<legend>${4:Titulo}:</legend>",
+            "\t\t<span class=\"fieldset\">",
+            "\t\t\t<div><input type=\"radio\" name=\"${3:idcampo}\" id=\"<%=${1:App}%>_${3:idcampo}_1\" value=\"1\"><label for=\"<%=${1:App}%>_${3:idcampo}_1\">Sim</label></div>",
+            "\t\t\t<div><input type=\"radio\" name=\"${3:idcampo}\" id=\"<%=${1:App}%>_${3:idcampo}_2\" value=\"0\"><label for=\"<%=${1:App}%>_${3:idcampo}_2\">Não</label></div>",
+            "\t\t</span>",
+            "\t</fieldset>",
+            "</li>"
+        ],
+        "description": "HTML para formulário, input radio para Sim e Não"
+    },
+    "Input TextArea": {
+        "prefix": "AI-form-textarea",
+        "body": [
+            "<li>",
+            "\t<label for=\"<%=${1:App}%>_${2:observacoes}\">${3:Observações}</label>",
+            "\t<textarea id=\"<%=${1:App}%>_${2:observacoes}\" name=\"${2:observacoes}\"${4: class=\"obrigatorio\"} cols=\"50\" rows=\"5\" ${5:data-max=\"${6:500}\" }data-tipo=\"texto\"><%=${2:observacoes}%></textarea>",
+            "\t${7:<div class=\"descricao\">${8:Valor Descrição}</div>}",
+            "</li>"
+        ],
+        "description": "HTML para formulário, input para observações e campos de texto longo"
+    },
+    "Outros Dados": {
+        "prefix": "AI-outros-dados-form",
+        "body": [
+            "<% if p <> \"${1:adicionar}\" then %>",
+            "\t<li class=\"FormSeparador\" title=\"${2:Outros Dados}\"><label>${2:Outros Dados}</li>",
+            "\t<li>",
+            "\t\t<label>${3:Utilizador Registo}</label>",
+            "\t\t<span class=\"leitura\"><%=${4:utilizador_registo}%> - (<%=ReturnValor(\"utilizadores\", \"[Nome Utilizador]\", \"utilizador\", \"'\" & ${4:utilizador_registo} & \"'\")%>)</span>",
+            "\t</li>",
+            "\t<li>",
+            "\t\t<label>${5:Data Registo}</label>",
+            "\t\t<span class=\"leitura\"><%=${6:data_registo}%></span>",
+            "\t</li>",
+            "\t<li>",
+            "\t\t<label>${7:Utilizador Alteração}</label>",
+            "\t\t<span class=\"leitura\"><%=${8:utilizador_alteracao}%> - (<%=ReturnValor(\"utilizadores\", \"[Nome Utilizador]\", \"utilizador\", \"'\" & ${8:utilizador_alteracao} & \"'\")%>)</span>",
+            "\t</li>",
+            "\t<li>",
+            "\t\t<label>${9:Data Alteração}</label>",
+            "\t\t<span class=\"leitura\"><%=${10:data_alteracao}%></span>",
+            "\t</li>",
+            "<% end if %>"
+        ],
+        "description": "HTML para formulário, dados de registo e alteração"
+    },
+    "Formulario": {
+        "prefix": "AI-formulario-base",
+        "body": [
+            "<form id=\"<%=App%>_${1:form}\" class=\"formulario\">",
+            "\t<input type=\"hidden\" name=\"<%=IdTabela%>\" value=\"<%=id%>\"/>",
+            "\t<input type=\"hidden\" name=\"<%=SeletorPaginas%>\" value=\"<%=p%>\"/>",
+            "\t<ol>",
+            "\t\t<li class=\"FormSeparador\" title=\"${2:Titulo Formulario}\"><label><i class=\"fa fa-search margin-r-5\"/>${2:Titulo Formulario}</label></li>",
+            "\t\t$3",
+            "\t</ol>",
+            "</form>",
+            "<div class=\"linhaseparadora\">",
+            "\t<div class=\"floatleft margin-l-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\" /></div>",
+            "\t<div class=\"floatright margin-r-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\" /></div>",
+            "</div>",
+            "<script type=\"text/javascript\">",
+            "\t$(function(){",
+            "\t\t$('div.linhaseparadora').find('i.fa-angle-double-up').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){ $(this).html(''); }); });",
+            "\t\t$('#<%=App%>_${1:form}').validar({",
+            "\t\t\t<% if p = \"visualizar\" then %>",
+            "\t\t\t\tformLeitura: true,",
+            "\t\t\t<% end if %>",
+            "\t\t\tcomplete: function(){",
+            "\t\t\t\tconst formulario = $(this);",
+            "\t\t\t\t$.post(",
+            "\t\t\t\t\t'<%=PaginaAtual%>',",
+            "\t\t\t\t\tformulario.serialize(),",
+            "\t\t\t\t\tfunction(retorno){",
+            "\t\t\t\t\t\tif(retorno.result === 'OK'){",
+            "\t\t\t\t\t\t\tmsgcarregando($('#<%=DivListagem%>'));",
+            "\t\t\t\t\t\t\t$.post(",
+            "\t\t\t\t\t\t\t\t'<%=PaginaAtual%>',",
+            "\t\t\t\t\t\t\t\t{ '<%=SeletorPaginas%>': '<%=SeletorListar%>' },",
+            "\t\t\t\t\t\t\t\tfunction(data){",
+            "\t\t\t\t\t\t\t\t\t$('#<%=DivListagem%>').html(data);",
+            "\t\t\t\t\t\t\t\t\talertify.success(retorno.msg);",
+            "\t\t\t\t\t\t\t\t\tformulario.validar('completo');",
+            "\t\t\t\t\t\t\t\t}",
+            "\t\t\t\t\t\t\t);",
+            "\t\t\t\t\t\t}",
+            "\t\t\t\t\t\telse{ alertify.error(retorno.msg); formulario.validar('completo'); }",
+            "\t\t\t\t\t},",
+            "\t\t\t\t\t'json'",
+            "\t\t\t\t);",
+            "\t\t\t}",
+            "\t\t});",
+            "\t});",
+            "</script>"
+        ],
+        "description": "HTML com formulário base e javascript de validação inicial"
+    },
+    "Tabuladores": {
+        "prefix": "AI-tabs",
+        "body": [
+            "<div id=\"<%=${1:App}%>_${2:tabs}\" class=\"tabs\">",
+            "\t<div class=\"separadores\">",
+            "\t\t<div class=\"item active\" data-pagina=\"${3:pagina1}\"><p>${4:Texto Tab 1}</p></div>",
+            "\t\t<div class=\"item\" data-pagina=\"${5:pagina2}\"><p>${6:Texto Tab 2}</p></div>",
+            "\t</div>",
+            "\t<div class=\"conteudo\"></div>",
+            "</div>",
+            "<script type=\"text/javascript\">",
+            "\t$(function(){",
+            "\t\t$('#<%=${1:App}%>_${2:tabs}').tabs({",
+            "\t\t\tOnClick: function(pagina){",
+            "\t\t\t\tconst conteudo = $(this);",
+            "\t\t\t\tmsgcarregando(conteudo);",
+            "\t\t\t\t$.post(",
+            "\t\t\t\t\t'${7:<%=PaginaAtual%>}',",
+            "\t\t\t\t\t{ '${8:<%=SeletorPaginas%>}': pagina },",
+            "\t\t\t\t\tfunction(data){ conteudo.html(data); }",
+            "\t\t\t\t);",
+            "\t\t\t}",
+            "\t\t});",
+            "\t});",
+            "</script>"
+        ],
+        "description": "HTML para criação de tabs já com javascript inicial"
+    },
+    "SQLDados Todos em um": {
+        "prefix": "AI-SQLDados-All-In-One",
+        "body": [
+            "Case \"${1:registar}\", \"${2:atualizar}\", \"${3:eliminar}\"",
+            "\tSet SQLDObj = new SQLDados",
+            "\tSQLDObj.Conn = ${4|conexao,conexaoconsultas,conexaocaaf,conexaologs,conexaoestatisticas,conexaorelogiodeponto,conexaocompamid,conexaosiads,conexaoemrrci,conexaoSAPA,conexaointranet,conexaocdm|}",
+            "\tSQLDObj.Tabela = ${5:NomeTabela}",
+            "\tSQLDObj.IdName = ${6:IdTabela}",
+            "\tselect case p",
+            "\t\tcase \"${1:registar}\"",
+            "\t\t\tSQLDObj.AddCampo \"${7:utilizador_registo}\", Session(\"utilizador\")",
+            "\t\t\tSQLDObj.AddCampo \"${8:utilizador_alteracao}\", Session(\"utilizador\")",
+            "\t\tcase \"${2:atualizar}\"",
+            "\t\t\tSQLDObj.TipoSQL = 1",
+            "\t\t\tSQLDObj.AddCampo \"${9:data_alteracao}\", \"GETDATE()\"",
+            "\t\t\tSQLDObj.AddCampo \"${8:utilizador_alteracao}\", Session(\"utilizador\")",
+            "\t\tcase \"${3:eliminar}\"",
+            "\t\t\tSQLDObj.TipoSQL = 2",
+            "\tend select",
+            "\tSQLDObj.Executar()",
+            "\tSQLDObj.Retorno.flush"
+        ],
+        "description": "SQL Dados com todas as ações registar/atualizar/eliminar"
+    },
+    "SQLDados": {
+        "prefix": "AI-SQLDados",
+        "body": [
+            "Set SQLDObj = new SQLDados",
+            "SQLDObj.Conn = ${1|conexao,conexaoconsultas,conexaocaaf,conexaologs,conexaoestatisticas,conexaorelogiodeponto,conexaocompamid,conexaosiads,conexaoemrrci,conexaoSAPA,conexaointranet,conexaocdm|}",
+            "SQLDObj.Tabela = ${2:NomeTabela}",
+            "SQLDObj.IdName = ${3:IdTabela}",
+            "SQLDObj.TipoSQL = ${4|0 'INSERT,1 'UPDATE,2 'DELETE|}",
+            "SQLDObj.guid = ${5|false,true|}",
+            "SQLDObj.Newguid = ${6|NULL,criarguid()|}",
+            "SQLDObj.MSGRegistoAdd = \"${7:Registo introduzido com sucesso}\"",
+            "SQLDObj.MSGRegistoEdit = \"${8:Registo atualizado com sucesso}\"",
+            "SQLDObj.MSGRegistoDel = \"${9:Registo eliminado com sucesso}\"",
+            "SQLDObj.Output = ${10|false,true|} 'Esta opção só pode ser usada com ID sequencial",
+            "SQLDObj.Debug = ${11|false,true|}",
+            "SQLDObj.InsertPrimaryKey = ${12|false,true|}",
+            "SQLDObj.TimeOutConn = ${13:15}",
+            "${14:SQLObj.AddIgnorar \"\" 'Adicionar nome do campo a ser ignorado}",
+            "${15:SQLDObj.AddCampo \"utilizador_registo\", Session(\"utilizador\")}",
+            "${16:SQLDObj.AddCampo \"data_alteracao\", \"GETDATE()\"}",
+            "${17:SQLDObj.AddCampo \"utilizador_alteracao\", Session(\"utilizador\")}",
+            "${18:SQLDObj.AddRetorno \"utilizador\", Session(\"utilizador\")}",
+            "${19:SQLDObj.AddNaoDuplicar \"Campo\"}",
+            "SQLDObj.Executar()",
+            "SQLDObj.Retorno.flush"
+        ],
+        "description": "SQL Dados com todas as opções possiveis de configurar"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "Fechar JS": {
+        "prefix": "AI-fecharjs",
+        "body": "$('div.linhaseparadora').find('i').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){$(this).html('');})});",
+        "description": "Script para fechar o DivAcoes"
+    },
+    "Novo jModal": {
+        "prefix": "AI-jmodal",
+        "body": [
+            "$.fn.jmodal({",
+            "\tinitWidth: ((window.innerWidth < 800) ? 600 : window.innerWidth-300),",
+            "\ttitle: \"<span class='soleituratopo'>${1:Titulo jModal}</span>\",",
+            "\tcontent: function(e){",
+            "\t\te.html('<div id=\"<%=App%>_jmodal\" class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
+            "\t\t$.post(",
+            "\t\t\t'<%=PaginaAtual%>',",
+            "\t\t\t{ '<%=SeletorPaginas%>': '${2:pagina a carregar}' },",
+            "\t\t\tfunction(data){ $('#<%=App%>_jmodal').html(data); }",
+            "\t\t);",
+            "\t},",
+            "\tbuttonText: { ok: 'OK', cancel: 'Fechar' },",
+            "\tokEvent: function(obj, args){ args.complete(); },",
+            "\tcancelEvent: function(obj, args){ args.complete(); }",
+            "});",
+            "${3:$('#JmodelCancel').hide();}",
+            "${4:$('#JmodelOK').hide();}",
+            "$5"
+        ],
+        "description": "Javascript para criação de uma janela de jmodal"
+    },
+    "Fechar jModal": {
+        "prefix": "AI-jmodal-esconder-fechar",
+        "body": "$.fn.hideJmodal();",
+        "description": "Script para esconder o botão fechar do jmodal"
+    }
+}
