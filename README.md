@@ -6,25 +6,27 @@ Snippets específicos para Aplicações Internas
 
 ## HTML / ASP
 
-- **AI-fecharhtml** - Fechar HTML
-- **AI-form-separador** - Separador Formulário
-- **AI-form-ilha-concelho-freguesia** - Inputs Distrito, Concelho e Freguesia
-- **AI-form-select** - Input Select
-- **AI-form-select-simnao** - Input Select Sim Não
-- **AI-form-geral** - Input Geral
-- **AI-form-data-nascimento-com-idade** - Input Data Nascimento
-- **AI-form-nissws** - Input NISSWS
-- **AI-form-nifws** - Input NIFWS
-- **AI-form-sexo** - Input Sexo
-- **AI-form-upload** - Input Upload
-- **AI-form-radio-checkbox** - Input Radio ou Checkbox
-- **AI-form-radio-simnao** - Input Radio Sim Nao
-- **AI-form-textarea** - Input TextArea
-- **AI-outros-dados-form** - Outros Dados
-- **AI-formulario-base** - Formulario
-- **AI-tabs** - Tabuladores
-- **AI-SQLDados-All-In-One** - SQLDados Todos em um
-- **AI-SQLDados** - SQLDados
+|Snippet|Descrição|
+|---|---|
+|`AI-fecharhtml`|Fechar HTML|
+|`AI-form-separador`|Separador formulário|
+|`AI-form-ilha-concelho-freguesia`|Inputs distrito, concelho e freguesia|
+|`AI-form-select`|Input select|
+|`AI-form-select-simnao`|Input select sim não|
+|`AI-form-geral`|Input geral|
+|`AI-form-data-nascimento-com-idade`|Input data nascimento|
+|`AI-form-nissws`|Input NISSWS|
+|`AI-form-nifws`|Input NIFWS|
+|`AI-form-sexo`|Input sexo|
+|`AI-form-upload`|Input upload|
+|`AI-form-radio-checkbox`|Input radio ou checkbox|
+|`AI-form-radio-simnao`|Input radio sim não|
+|`AI-form-textarea`|Input textarea|
+|`AI-outros-dados-form`|Outros dados|
+|`AI-formulario-base`|Formulario|
+|`AI-tabs`|Tabuladores|
+|`AI-SQLDados-All-In-One`|SQLDados todos em um|
+|`AI-SQLDados`|SQLDados|
 
 ## Javascript
 
