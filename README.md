@@ -1,11 +1,7 @@
 # AI-Snippets README
-
 Snippets específicos para Aplicações Internas
-
 # Descrição
-
 ## HTML / ASP
-
 |Snippet|Descrição|
 |---|---|
 |`AI-fecharhtml`|Fechar HTML|
@@ -29,29 +25,10 @@ Snippets específicos para Aplicações Internas
 |`AI-SQLDados`|SQLDados|
 
 ## Javascript
-
-- **AI-fecharjs** - Fechar JS
-- **AI-jmodal** - Novo jModal
-- **AI-jmodal-esconder-fechar** - Fechar jModal
-
----
-
-# Release Notes
-
-## 1.0.0
-```
-Release Inicial
-```
-## 1.0.1
-```
-Correção de erros
-```
-
-## 1.0.2
-```
-Disponibilização de documentação
-```
-
+|Snippet|Descrição|
+|---|---|
+|`AI-fecharjs`|Fechar JS|
+|`AI-jmodal`|Novo jModal|
+|`AI-jmodal-esconder-fechar`|Fechar jModal|
 # Autor
-
 **Nuno Silva** - [NMDSilva](https://github.com/NMDSilva)
