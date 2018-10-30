@@ -1,5 +1,8 @@
 # Change Log
-All notable changes to the "aisnippets" extension will be documented in this file.
+Todas as alterações "aisnippets"
+
+## [1.0.4]
+- Adicionado snippet - AI-form-radio-checkbox-tabela
 
 ## [1.0.3]
 - Disponibilização de documentação - UPDATE

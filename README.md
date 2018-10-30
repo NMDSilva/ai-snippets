@@ -16,6 +16,7 @@ Snippets específicos para Aplicações Internas
 |`AI-form-sexo`|Input sexo|
 |`AI-form-upload`|Input upload|
 |`AI-form-radio-checkbox`|Input radio ou checkbox|
+|`AI-form-radio-checkbox-tabela`|Input radio ou checkbox a partir de tabela|
 |`AI-form-radio-simnao`|Input radio sim não|
 |`AI-form-textarea`|Input textarea|
 |`AI-outros-dados-form`|Outros dados|

@@ -95,8 +95,8 @@
         "prefix": "AI-form-nifws",
         "body": [
             "<li>",
-            "\t<label for=\"<%=App%>_${1:idcampo}\">${2:Titulo Campo}</label>",
-            "\t<input type=\"text\" id=\"<%=App%>_${1:idcampo}\" name=\"${1:idcampo}\" data-tipo=\"nifws\" data-campo=\"${3:id_campo_niss}\"${4: class=\"obrigatorio\"}${5: data-preenchimento=\"<%=${1:idcampo}%>\"}/>",
+            "\t<label for=\"<%=${1:App}%>_${2:idcampo}\">${3:Titulo Campo}</label>",
+            "\t<input type=\"text\" id=\"<%=${1:App}%>_${2:idcampo}\" name=\"${2:idcampo}\" data-tipo=\"nifws\" data-campo=\"<%=${1:App}%>_${4:id_campo_niss}\"${5: class=\"obrigatorio\"}${6: data-preenchimento=\"<%=${2:idcampo}%>\"}/>",
             "</li>"
         ],
         "description": "HTML para formulário, input NIF WS"
@@ -138,6 +138,18 @@
             "</li>"
         ],
         "description": "HTML para formulário, input radio ou checkbox com código Emmet para varias opções"
+    },
+    "Input Radio ou Checkbox a partir de tabela": {
+        "prefix": "AI-form-radio-checkbox-tabela",
+        "body":[
+            "<li>",
+            "\t<fieldset id=\"<%=App%>_${1:nome_campo}\" name=\"${1:nome_campo}\" class=\"obrigatorio\" data-tipo=\"${2|radio,checkbox|}\" data-tabela=\"${3:tabela}\" data-ordenar=\"${4:campo_ordenar}\" ${5:data-tipoordenar=\"asc\" data-filtro=\"\" data-vfiltro=\"\" data-id=\"\" data-value=\"\" }data-selecionado=\"<%=${1:nome_campo}%>\">",
+            "\t\t<legend>${6:Titulo}:</legend>",
+            "\t\t<span class=\"fieldset\"></span>",
+            "\t</fieldset>",
+            "</li>"
+        ],
+        "description": "HTML para formulário, input radio ou checkbox com seletores para tabela"
     },
     "Input Radio Sim Nao": {
         "prefix": "AI-form-radio-simnao",
