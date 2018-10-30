@@ -2,7 +2,7 @@
     "name": "aisnippets",
     "displayName": "AI-Snippets",
     "description": "Snippets para Aplicações Internas",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "nmsilva",
     "repository": {
         "type": "git",
