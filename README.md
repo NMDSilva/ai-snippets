@@ -1,3 +1,7 @@
+[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/NMSilva.aisnippets.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=NMSilva.aisnippets)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/NMSilva.aisnippets.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=NMSilva.aisnippets)
+[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
 # AI-Snippets README
 
 Snippets específicos para Aplicações Internas
