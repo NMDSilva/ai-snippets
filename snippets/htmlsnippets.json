@@ -47,7 +47,7 @@
         "body": [
             "<li>",
             "\t<label for=\"<%=App%>_${1:id_select}\">${2:Select}</label>",
-            "\t<select id=\"<%=App%>_${1:id_select}\" name=\"${1:id_select}\" ${3:class=\"obrigatorio\"} data-tipo=\"select\" data-selecionado=\"<%=${1:id_select}%>\">",
+            "\t<select id=\"<%=App%>_${1:id_select}\" name=\"${1:id_select}\" ${3:class=\"obrigatorio\"} data-tipo=\"select\" data-preenchimento=\"<%=${1:id_select}%>\">",
             "\t\t<option value=\"\">Escolha um item...</option>",
             "\t\t<option value=\"0\">Não</option>",
             "\t\t<option value=\"1\">Sim</option>",

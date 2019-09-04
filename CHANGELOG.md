@@ -2,9 +2,13 @@
 
 Todas as alterações "aisnippets"
 
-## [1.0.5]
+## [1.0.6]
 
 -   Adicionado snippet - **_AI-ListarDados_**, **_AI-ListarDados-AddCampo_** e **_AI-ListarDados-AddAcoes_**
+
+## [1.0.5]
+
+-   Correção de bugs
 
 ## [1.0.4]
 
