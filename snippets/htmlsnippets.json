@@ -141,7 +141,7 @@
     },
     "Input Radio ou Checkbox a partir de tabela": {
         "prefix": "AI-form-radio-checkbox-tabela",
-        "body":[
+        "body": [
             "<li>",
             "\t<fieldset id=\"<%=App%>_${1:nome_campo}\" name=\"${1:nome_campo}\" class=\"obrigatorio\" data-tipo=\"${2|radio,checkbox|}\" data-tabela=\"${3:tabela}\" data-ordenar=\"${4:campo_ordenar}\" ${5:data-tipoordenar=\"asc\" data-filtro=\"\" data-vfiltro=\"\" data-id=\"\" data-value=\"\" }data-selecionado=\"<%=${1:nome_campo}%>\">",
             "\t\t<legend>${6:Titulo}:</legend>",
@@ -332,5 +332,50 @@
             "SQLDObj.Retorno.flush"
         ],
         "description": "SQL Dados com todas as opções possiveis de configurar"
+    },
+    "ListarDados": {
+        "prefix": "AI-ListarDados",
+        "body": [
+            "Set ObjListarDados = New ListarDados",
+            "ObjListarDados.Conn = ${1|conexao,conexaoconsultas,conexaocaaf,conexaologs,conexaoestatisticas,conexaorelogiodeponto,conexaocompamid,conexaosiads,conexaoemrrci,conexaoSAPA,conexaointranet,conexaocdm|}",
+            "ObjListarDados.AppName = ${2:App}",
+            "ObjListarDados.Tabela = ${3:NomeTabela}",
+            "ObjListarDados.TabelaId = ${4:IdTabela}",
+            "ObjListarDados.Filtro = ${5:null}",
+            "ObjListarDados.Pagina = ${6:PaginaAtual}",
+            "ObjListarDados.SeletorListar = ${7:SeletorListar}",
+            "ObjListarDados.DivListagem = ${8:DivListagem}",
+            "ObjListarDados.DivAcoes = ${9:DivAcoes}",
+            "ObjListarDados.TipoEnvio = \"${10|post,get|}\"",
+            "ObjListarDados.Debug = ${11|false,true|}",
+            "ObjListarDados.PAdd = ${12|true,false|}",
+            "ObjListarDados.PView = ${13|true,false|}",
+            "ObjListarDados.PEdit = ${14|true,false|}",
+            "ObjListarDados.PDelete = ${15|true,false|}",
+            "ObjListarDados.Paginar = ${16|true,false|}",
+            "ObjListarDados.OrdenarPor = ${17:null}",
+            "'AI-ListarDados-AddCampo",
+            "'ObjListarDados.AddCamposListagem Array(campo, label, percentagem, alinhamento, tipo_campo, footer)",
+            "$18",
+            "'AI-ListarDados-AddAcoes",
+            "'ObjListarDados.AddAcoes Array(funcao, tipo_campo, valor, label, atributos)",
+            "$19",
+            "ObjListarDados.ListarTabela()"
+        ],
+        "description": "Listar Dados"
+    },
+    "ListarDadosCampo": {
+        "prefix": "AI-ListarDados-AddCampo",
+        "body": [
+            "ObjListarDados.AddCamposListagem Array(\"${1:campo}\", \"${2:label}\", ${3:null}, ${4|\"center\",\"left\",\"right\"|}${5:, ${6|null,\"link\",\"estado\"|}, ${7|null,\"soma\"|}})"
+        ],
+        "description": "Listar Dados Adicionar Campo"
+    },
+    "ListarDadosAcoes": {
+        "prefix": "AI-ListarDados-AddAcoes",
+        "body": [
+            "ObjListarDados.AddAcoes Array(\"${1:funcao}\", \"${2|icon,link|}\", \"${3:valor}\", \"${4:label}\", ${5|null,\"atributos html\"|})"
+        ],
+        "description": "Listar Dados Adicionar Ação"
     }
 }
