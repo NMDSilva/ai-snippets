@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.0.8]
+
+-   Correção de bugs
+
 ## [1.0.7]
 
 -   Novos tipos de campo em **_AI-ListarDados-AddCampo_**

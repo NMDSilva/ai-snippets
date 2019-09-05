@@ -355,7 +355,7 @@
             "ObjListarDados.Paginar = ${16|true,false|}",
             "ObjListarDados.OrdenarPor = ${17:null}",
             "'AI-ListarDados-AddCampo",
-            "'ObjListarDados.AddCamposListagem Array(campo, label, percentagem, alinhamento, tipo_campo, footer)",
+            "'ObjListarDados.AddCamposListagem Array(campo, label, percentagem, tipo_campo, alinhamento, footer)",
             "$18",
             "'AI-ListarDados-AddAcoes",
             "'ObjListarDados.AddAcoes Array(funcao, tipo_campo, valor, label, atributos)",
@@ -367,7 +367,7 @@
     "ListarDadosCampo": {
         "prefix": "AI-ListarDados-AddCampo",
         "body": [
-            "ObjListarDados.AddCamposListagem Array(\"${1:campo}\", \"${2:label}\", ${3:null}, ${4|\"center\",\"left\",\"right\"|}${5:, ${6|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}, ${7|null,\"soma\"|}})"
+            "ObjListarDados.AddCamposListagem Array(\"${1:campo}\", \"${2:label}\", ${3:null}, ${4|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}${5:, ${6|\"center\",\"left\",\"right\"|}, ${7|null,\"soma\"|}})"
         ],
         "description": "Listar Dados Adicionar Campo"
     },
