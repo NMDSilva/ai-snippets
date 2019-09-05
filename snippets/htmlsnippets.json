@@ -367,7 +367,7 @@
     "ListarDadosCampo": {
         "prefix": "AI-ListarDados-AddCampo",
         "body": [
-            "ObjListarDados.AddCamposListagem Array(\"${1:campo}\", \"${2:label}\", ${3:null}, ${4|\"center\",\"left\",\"right\"|}${5:, ${6|null,\"link\",\"estado\"|}, ${7|null,\"soma\"|}})"
+            "ObjListarDados.AddCamposListagem Array(\"${1:campo}\", \"${2:label}\", ${3:null}, ${4|\"center\",\"left\",\"right\"|}${5:, ${6|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}, ${7|null,\"soma\"|}})"
         ],
         "description": "Listar Dados Adicionar Campo"
     },
