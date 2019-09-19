@@ -4,7 +4,7 @@
 
 # AI-Snippets README
 
-Snippets específicos para Aplicações Internas
+Snippets específicos para Aplicações Informáticas
 
 # Descrição
 
