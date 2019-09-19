@@ -184,7 +184,7 @@
             "\t<li class=\"FormSeparador\" title=\"${2:Outros Dados}\"><label>${2:Outros Dados}</li>",
             "\t<li>",
             "\t\t<label>${3:Utilizador Registo}</label>",
-            "\t\t<span class=\"leitura\"><%=${4:utilizador_registo}%> - (<%=ReturnValor(\"utilizadores\", \"[Nome Utilizador]\", \"utilizador\", \"'\" & ${4:utilizador_registo} & \"'\")%>)</span>",
+            "\t\t<span class=\"leitura\"><%=${4:utilizador_registo}%> - (<%=ReturnValor(\"utilizadores\", \"nome\", \"utilizador\", \"'\" & ${4:utilizador_registo} & \"'\")%>)</span>",
             "\t</li>",
             "\t<li>",
             "\t\t<label>${5:Data Registo}</label>",
@@ -192,7 +192,7 @@
             "\t</li>",
             "\t<li>",
             "\t\t<label>${7:Utilizador Alteração}</label>",
-            "\t\t<span class=\"leitura\"><%=${8:utilizador_alteracao}%> - (<%=ReturnValor(\"utilizadores\", \"[Nome Utilizador]\", \"utilizador\", \"'\" & ${8:utilizador_alteracao} & \"'\")%>)</span>",
+            "\t\t<span class=\"leitura\"><%=${8:utilizador_alteracao}%> - (<%=ReturnValor(\"utilizadores\", \"nome\", \"utilizador\", \"'\" & ${8:utilizador_alteracao} & \"'\")%>)</span>",
             "\t</li>",
             "\t<li>",
             "\t\t<label>${9:Data Alteração}</label>",
@@ -367,14 +367,14 @@
     "ListarDadosCampo": {
         "prefix": "AI-ListarDados-AddCampo",
         "body": [
-            "ObjListarDados.AddCamposListagem Array(\"${1:campo}\", \"${2:label}\", ${3:null}, ${4|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}${5:, ${6|\"center\",\"left\",\"right\"|}, ${7|null,\"soma\"|}})"
+            "${1:ObjListarDados}.AddCamposListagem Array(\"${2:campo}\", \"${3:label}\", ${4:null}, ${5|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}${6:, ${7|\"center\",\"left\",\"right\"|}, ${8|null,\"soma\"|}})"
         ],
         "description": "Listar Dados Adicionar Campo"
     },
     "ListarDadosAcoes": {
         "prefix": "AI-ListarDados-AddAcoes",
         "body": [
-            "ObjListarDados.AddAcoes Array(\"${1:funcao}\", \"${2|icon,link|}\", \"${3:valor}\", \"${4:label}\", ${5|null,\"atributos html\"|})"
+            "${1:ObjListarDados}.AddAcoes Array(\"${2:funcao}\", \"${3|icon,link|}\", \"${4:valor}\", \"${5:label}\", ${6|null,\"atributos html\"|})"
         ],
         "description": "Listar Dados Adicionar Ação"
     }

@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.0.9]
+
+-   Correção de bugs
+
 ## [1.0.8]
 
 -   Correção de bugs
