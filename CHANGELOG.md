@@ -2,7 +2,7 @@
 
 Todas as alterações "aisnippets"
 
-## [1.1]
+## [1.1.0]
 
 -   Adição de novo snippet e correção de bug
 
