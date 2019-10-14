@@ -355,7 +355,7 @@
             "ObjListarDados.Paginar = ${16|true,false|}",
             "ObjListarDados.OrdenarPor = ${17:null}",
             "'AI-ListarDados-AddCampo",
-            "'ObjListarDados.AddCamposListagem Array(campo, label, percentagem, tipo_campo, alinhamento, footer)",
+            "'ObjListarDados.AddCamposListagem Array(campo, label, percentagem, tipo_campo, alinhamento, Formatação Campo, footer, Formatações TR)",
             "$18",
             "'AI-ListarDados-AddAcoes",
             "'ObjListarDados.AddAcoes Array(funcao, tipo_campo, valor, label, atributos)",
@@ -367,7 +367,7 @@
     "ListarDadosCampo": {
         "prefix": "AI-ListarDados-AddCampo",
         "body": [
-            "${1:ObjListarDados}.AddCamposListagem Array(\"${2:campo}\", \"${3:label}\", ${4:null}, ${5|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}${6:, ${7|\"center\",\"left\",\"right\"|}, ${8|null,\"soma\"|}})"
+            "${1:ObjListarDados}.AddCamposListagem Array(\"${2:campo}\", \"${3:label}\", ${4:null}, ${5|null,\"horas\",\"hora\",\"data\",\"bit\",\"datahora\",\"percentagem\",\"moeda\",\"moedacores\",\"email\",\"link\",\"estado\"|}${6:, ${7|\"center\",\"left\",\"right\"|}, ${8:null}, ${9|null,\"soma\"|}, ${10:null}})"
         ],
         "description": "Listar Dados Adicionar Campo"
     },
@@ -377,5 +377,12 @@
             "${1:ObjListarDados}.AddAcoes Array(\"${2:funcao}\", \"${3|icon,link|}\", \"${4:valor}\", \"${5:label}\", ${6|null,\"atributos html\"|})"
         ],
         "description": "Listar Dados Adicionar Ação"
-    }
+    },
+    "rsclose": {
+		"prefix": "rsclose",
+		"body": [
+			"${1:rs}.close : Set ${1:rs} = Nothing"
+		],
+		"description": "rs ou connection close"
+	}
 }
