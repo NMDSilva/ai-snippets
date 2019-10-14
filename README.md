@@ -35,6 +35,7 @@ Snippets específicos para Aplicações Informáticas
 | `AI-ListarDados`                    | ListarDados                                |
 | `AI-ListarDados-AddCampo`           | ListarDados - Adicionar Campo              |
 | `AI-ListarDados-AddAcoes`           | ListarDados - Adicionar Ação               |
+| `rsclose`                           | Fechar connexão                            |
 
 ## Javascript
 
