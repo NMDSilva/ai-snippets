@@ -384,5 +384,12 @@
 			"${1:rs}.close : Set ${1:rs} = Nothing"
 		],
 		"description": "rs ou connection close"
-	}
+    },
+    "ReturnarValor": {
+		"prefix": "retornarvalor",
+		"body": [
+			"ReturnValor(${1:tabela}, ${2:campo retorno}, ${3:filtro}, ${4:valor filtro})"
+		],
+		"description": "ReturnValor"
+    }
 }

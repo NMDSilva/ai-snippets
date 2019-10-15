@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.1]
+
+-   Adição de novo snippet **_RetornarValor_**
+
 ## [1.1.0]
 
 -   Adição de novo snippet e correção de bug
