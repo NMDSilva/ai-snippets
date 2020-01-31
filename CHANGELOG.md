@@ -2,9 +2,9 @@
 
 Todas as alterações "aisnippets"
 
-## [1.1.2]
+## [1.1.3]
 
--   Adição de novo snippet **_AI-listar-json_**
+-   Adição de novo snippet **_AI-listar-json-asp_** **_AI-json-to-select_**
 
 ## [1.1.2]
 
