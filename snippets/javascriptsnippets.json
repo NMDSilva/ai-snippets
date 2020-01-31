@@ -31,5 +31,22 @@
         "prefix": "AI-jmodal-esconder-fechar",
         "body": "$.fn.hideJmodal();",
         "description": "Script para esconder o botão fechar do jmodal"
+    },
+    "JSON To Select": {
+        "prefix": "AI-json-to-select",
+        "body": [
+            "$.post(",
+            "\t'<%=PaginaAtual%>',",
+            "\t{ '<%=SeletorPaginas%>': '${1:CAMPO_CASE}' },",
+            "\tfunction(res){",
+            "\t\tif (res.result.toLowerCase() === 'ok'){",
+            "\t\t\tjsonToSelect(${2:objSelect}, res.dados);",
+            "\t\t}",
+            "\t\telse{ alertify.error(res.msg); }",
+            "\t},",
+            "\t'json'",
+            ");"
+        ],
+        "description": "Código JS para carregar JSON em select"
     }
 }

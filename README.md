@@ -35,6 +35,7 @@ Snippets específicos para Aplicações Informáticas
 | `AI-ListarDados`                    | ListarDados                                |
 | `AI-ListarDados-AddCampo`           | ListarDados - Adicionar Campo              |
 | `AI-ListarDados-AddAcoes`           | ListarDados - Adicionar Ação               |
+| `AI-listar-json-asp`                | Código ASP para carregar JSON com dados de Tabela|
 | `rsclose`                           | Fechar connexão                            |
 | `retornarvalor`                     | Retornar Valor                             |
 
@@ -45,6 +46,7 @@ Snippets específicos para Aplicações Informáticas
 | `AI-fecharjs`               | Fechar JS     |
 | `AI-jmodal`                 | Novo jModal   |
 | `AI-jmodal-esconder-fechar` | Fechar jModal |
+| `AI-json-to-select`         | Código JS para carregar JSON em select     |
 
 # Autor
 

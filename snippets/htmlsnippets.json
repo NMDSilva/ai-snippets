@@ -378,6 +378,24 @@
         ],
         "description": "Listar Dados Adicionar Ação"
     },
+    "To JSON": {
+        "prefix": "AI-listar-json-asp",
+        "body": [
+            "Set ObjDados = jsObject()",
+            "SQL = \"SELECT ID AS value, CAMPO AS text FROM TABELA\"",
+            "Set ObjDados(\"dados\") = QueryToJSON(ligacao, SQL)",
+            "if Err.Number <> 0 then",
+            "\tObjDados.Remove \"dados\"",
+            "\tObjDados(\"result\") = \"erro\"",
+            "\tObjDados(\"msg\") = \"Problema ao consultar dados\"",
+            "else",
+            "\tObjDados(\"result\") = \"ok\"",
+            "end if",
+            "ObjDados.flush",
+            "Set ObjDados = Nothing"
+        ],
+        "description": "Código ASP para carregar JSON com dados de Tabela"
+    },
     "rsclose": {
 		"prefix": "rsclose",
 		"body": [

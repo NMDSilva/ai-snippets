@@ -4,6 +4,10 @@ Todas as alterações "aisnippets"
 
 ## [1.1.2]
 
+-   Adição de novo snippet **_AI-listar-json_**
+
+## [1.1.2]
+
 -   Correção de bugs
 
 ## [1.1.1]
