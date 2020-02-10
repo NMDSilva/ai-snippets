@@ -409,5 +409,41 @@
 			"ReturnValor(\"${1:tabela}\", \"${2:campo retorno}\", \"${3:filtro}\", \"${4:valor filtro}\")"
 		],
 		"description": "ReturnValor"
+    },
+    "Abrir Ligacao": {
+        "prefix": "AI-ligacao",
+        "body": [
+            "Set ligacao = Server.CreateObject(\"ADODB.Connection\")",
+            "ligacao.Open ${1|conexao,conexaoconsultas,conexaocaaf,conexaologs,conexaoestatisticas,conexaorelogiodeponto,conexaocompamid,conexaosiads,conexaoemrrci,conexaoSAPA,conexaointranet,conexaocdm|}",
+            "If Err.Number <> 0 then",
+            "\tlogerros(Err.Description & vbTab & ${1})",
+            "\tErr.Clear",
+            "End If"
+        ]
+    },
+    "Registo Stored Procedure": {
+        "prefix": "AI-Executar-Stored-Procedure",
+        "body": [
+            "Set objJson = jsObject()",
+            "Set ComandoSQL = Server.CreateObject(\"ADODB.Command\")",
+			"Dim result 'Campo de retorno, caso exista",
+			"Dim msg 'Campo de retorno, caso exista",
+			"With ComandoSQL",
+			"\t.ActiveConnection = ligacao",
+			"\t.CommandText = \"${1:stored_procedure}\"",
+			"\t.CommandType = 4",
+			"\t.Parameters.Item(\"@${2:campo_obrigatorio}\").value = ${2:campo_obrigatorio}",
+			"\tif ${3:campo_nao_obrigatorio} <> \"\" then .Parameters.Item(\"@${3:campo_nao_obrigatorio}\").value = ${3:campo_nao_obrigatorio}",
+			"\t.Execute",
+			"\tresult = .Parameters(\"@result\") 'Campo de retorno, caso exista",
+			"\tmsg = .Parameters(\"@msg\") 'Campo de retorno, caso exista",
+			"End With",
+			"if IsNull(result) then result = \"erro\"",
+			"if IsNull(msg) then msg = \"\"",
+			"objJson(\"result\") = result",
+			"objJson(\"msg\") = msg",
+			"objJson.flush",
+			"Set objJson = Nothing"
+        ]
     }
 }

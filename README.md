@@ -36,6 +36,8 @@ Snippets específicos para Aplicações Informáticas
 | `AI-ListarDados-AddCampo`           | ListarDados - Adicionar Campo                    |
 | `AI-ListarDados-AddAcoes`           | ListarDados - Adicionar Ação                     |
 | `AI-listar-json-asp`                | Código ASP para carregar JSON com dados de Tabela|
+| `AI-ligacao`                        | Abrir Ligação                                    |
+| `AI-Executar-Stored-Procedure`      | Execução de Stored Procedure                     |
 | `rsclose`                           | Fechar connexão                                  |
 | `retornarvalor`                     | Retornar Valor                                   |
 

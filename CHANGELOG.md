@@ -2,6 +2,11 @@
 
 Todas as alterações "aisnippets"
 
+
+## [1.1.4]
+
+-   Adição de novo snippet **_AI-ligacao_** **_AI-Executar-Stored-Procedure_**
+
 ## [1.1.3]
 
 -   Adição de novo snippet **_AI-listar-json-asp_** **_AI-json-to-select_**
