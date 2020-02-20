@@ -61,7 +61,7 @@
         "body": [
             "<li>",
             "\t<label for=\"<%=App%>_$1\">${2:Titulo Campo}</label>",
-            "\t<input type=\"text\" id=\"<%=App%>_$1\" name=\"$1\" data-tipo=\"${3|texto,km,moeda,decimal,ano,numerico,data,hora,datahora,datahoraseparados,matricula,idcodpostal,codpostal,nif,niss,cae,nib,telefone,fax,email,artigo|}\" class=\"${4:obrigatorio}\" ${5: data-preenchimento=\"<%=$1%>\"}/>",
+            "\t<input type=\"text\" id=\"<%=App%>_$1\" name=\"$1\" data-tipo=\"${3|ano,artigo,cae,codpostal,data,datahora,datahoraseparados,decimal,email,fax,hora,idcodpostal,km,matricula,moeda,nib,nif,niss,numerico,percentagem,telefone,texto|}\" class=\"${4:obrigatorio}\" ${5: data-preenchimento=\"<%=$1%>\"}/>",
             "\t${6:<div class=\"descricao\">${7:Valor Informativo}</div>}",
             "</li>"
         ],

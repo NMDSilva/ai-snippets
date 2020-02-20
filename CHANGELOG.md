@@ -2,6 +2,9 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.5]
+
+-   Adicionado novo tipo no snippet **_AI-form-geral_**
 
 ## [1.1.4]
 
