@@ -2,8 +2,8 @@
     "name": "aisnippets",
     "displayName": "AI-Snippets",
     "description": "Snippets para Aplicações Informáticas",
-    "version": "1.1.5",
-    "publisher": "nmsilva",
+    "version": "1.1.6",
+    "publisher": "NMSilva",
     "repository": {
         "type": "git",
         "url": "https://github.com/NMDSilva/snippets.git"

@@ -1,52 +1,52 @@
 {
-    "Fechar JS": {
-        "prefix": "AI-fecharjs",
-        "body": "$('div.linhaseparadora').find('i').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){$(this).html('');})});",
-        "description": "Script para fechar o DivAcoes"
-    },
-    "Novo jModal": {
-        "prefix": "AI-jmodal",
-        "body": [
-            "$.fn.jmodal({",
-            "\tinitWidth: ((window.innerWidth < 800) ? 600 : window.innerWidth-300),",
-            "\ttitle: \"<span class='soleituratopo'>${1:Titulo jModal}</span>\",",
-            "\tcontent: function(e){",
-            "\t\te.html('<div id=\"<%=App%>_jmodal\" class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
-            "\t\t$.post(",
-            "\t\t\t'<%=PaginaAtual%>',",
-            "\t\t\t{ '<%=SeletorPaginas%>': '${2:pagina a carregar}' },",
-            "\t\t\tfunction(data){ $('#<%=App%>_jmodal').html(data); }",
-            "\t\t);",
-            "\t},",
-            "\tbuttonText: { ok: 'OK', cancel: 'Fechar' },",
-            "\tokEvent: function(obj, args){ args.complete(); },",
-            "\tcancelEvent: function(obj, args){ args.complete(); }",
-            "});",
-            "${3:$('#JmodelCancel').hide();}",
-            "${4:$('#JmodelOK').hide();}"
-        ],
-        "description": "Javascript para criação de uma janela de jmodal"
-    },
-    "Fechar jModal": {
-        "prefix": "AI-jmodal-esconder-fechar",
-        "body": "$.fn.hideJmodal();",
-        "description": "Script para esconder o botão fechar do jmodal"
-    },
-    "JSON To Select": {
-        "prefix": "AI-json-to-select",
-        "body": [
-            "$.post(",
-            "\t'<%=PaginaAtual%>',",
-            "\t{ '<%=SeletorPaginas%>': '${1:CAMPO_CASE}' },",
-            "\tfunction(res){",
-            "\t\tif (res.result.toLowerCase() === 'ok'){",
-            "\t\t\tjsonToSelect(${2:objSelect}, res.dados);",
-            "\t\t}",
-            "\t\telse{ alertify.error(res.msg); }",
-            "\t},",
-            "\t'json'",
-            ");"
-        ],
-        "description": "Código JS para carregar JSON em select"
-    }
+  "Fechar JS": {
+    "prefix": "AI-fechar-js",
+    "body": "$('div.linhaseparadora').find('i').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){$(this).html('');})});",
+    "description": "Script para fechar o DivAcoes"
+  },
+  "Novo jModal": {
+    "prefix": "AI-jmodal",
+    "body": [
+      "$.fn.jmodal({",
+      "  initWidth: ((window.innerWidth < 800) ? 600 : window.innerWidth-300),",
+      "  title: \"<span class='soleituratopo'>${1:Titulo jModal}</span>\",",
+      "  content: function(e){",
+      "    e.html('<div id=\"<%=App%>_jmodal\" class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
+      "    $.post(",
+      "      '<%=PaginaAtual%>',",
+      "      { '<%=SeletorPaginas%>': '${2:pagina a carregar}' },",
+      "      function(data){ $('#<%=App%>_jmodal').html(data); }",
+      "    );",
+      "  },",
+      "  buttonText: { ok: 'OK', cancel: 'Fechar' },",
+      "  okEvent: function(obj, args){ args.complete(); },",
+      "  cancelEvent: function(obj, args){ args.complete(); }",
+      "});",
+      "${3:$('#JmodelCancel').hide();}",
+      "${4:$('#JmodelOK').hide();}"
+    ],
+    "description": "Javascript para criação de uma janela de jmodal"
+  },
+  "Fechar jModal": {
+    "prefix": "AI-jmodal-esconder-fechar",
+    "body": "$.fn.hideJmodal();",
+    "description": "Script para esconder o botão fechar do jmodal"
+  },
+  "JSON To Select": {
+    "prefix": "AI-json-to-select",
+    "body": [
+      "$.post(",
+      "  '<%=PaginaAtual%>',",
+      "  { '<%=SeletorPaginas%>': '${1:CAMPO_CASE}' },",
+      "  function(res){",
+      "    if (res.result.toLowerCase() === 'ok'){",
+      "      jsonToSelect(${2:objSelect}, res.dados);",
+      "    }",
+      "    else{ alertify.error(res.msg); }",
+      "  },",
+      "  'json'",
+      ");"
+    ],
+    "description": "Código JS para carregar JSON em select"
+  }
 }
