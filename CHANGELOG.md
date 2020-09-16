@@ -2,6 +2,11 @@
 
 Todas as alterações "aisnippets"
 
+
+## [1.1.7]
+
+- Correção erro snippet **_AI-fechar-objeto_**
+
 ## [1.1.6]
 
 - Adicionado novo snippet e normalização de antigos snippets

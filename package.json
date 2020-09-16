@@ -1,34 +1,37 @@
 {
-    "name": "aisnippets",
-    "displayName": "AI-Snippets",
-    "description": "Snippets para Aplicações Informáticas",
-    "version": "1.1.6",
-    "publisher": "NMSilva",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/NMDSilva/snippets.git"
-    },
-    "icon": "icon.png",
-    "engines": {
-        "vscode": "^1.28.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "html",
-                "path": "./snippets/htmlsnippets.json"
-            },
-            {
-                "language": "asp",
-                "path": "./snippets/htmlsnippets.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/javascriptsnippets.json"
-            }
-        ]
-    }
+  "name": "aisnippets",
+  "displayName": "AI-Snippets",
+  "description": "Snippets para Aplicações Informáticas",
+  "version": "1.1.7",
+  "publisher": "NMSilva",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NMDSilva/snippets.git"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "scripts": {
+    "compile": "vsce package"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/htmlsnippets.json"
+      },
+      {
+        "language": "asp",
+        "path": "./snippets/htmlsnippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascriptsnippets.json"
+      }
+    ]
+  }
 }

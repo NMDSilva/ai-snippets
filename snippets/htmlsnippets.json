@@ -667,7 +667,7 @@
   "Fechar Objeto": {
     "prefix": "AI-fechar-objeto",
     "body": [
-      "${1:|ligacao,rs|}.close : Set $1 = Nothing"
+      "${1|ligacao,rs|}.close : Set $1 = Nothing"
     ],
     "description": "Fechar objeto de asp"
   },
