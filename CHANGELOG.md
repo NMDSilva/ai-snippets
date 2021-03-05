@@ -2,6 +2,13 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.9]
+
+- Adicionado tipos de campo em **_AI-ListarDados-AddCampo_**
+
+## [1.1.8]
+
+- Adicionado novo snippet **_AI-listar-sql_**
 
 ## [1.1.7]
 
