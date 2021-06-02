@@ -40,7 +40,7 @@
       "        Set ligacao = Server.CreateObject(\"ADODB.Connection\")",
       "        ligacao.Open ${4|conexao,conexaoconsultas,conexaocaaf,conexaointranet,conexaocdm,conexaofeac,conexaologs,conexaoestatisticas,conexaorelogiodeponto,conexaocompamid,conexaocrp,conexaodev,conexaoidq,conexaosgc,conexaosiads,conexaoemrrci,conexaoplataforma,conexaoSAPA|}",
       "        If Err.Number <> 0 then",
-      "          logerros(Err.Description & vbTab & $4)",
+      "          logerros(Err.Description)",
       "          Err.Clear",
       "        End If",
       "        operacao = \"\"",
@@ -104,14 +104,11 @@
       "          <% end if %>",
       "        </ol>",
       "      </form>",
-      "      <div class=\"linhaseparadora\">",
-      "        <div class=\"floatleft margin-l-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\"></i></div>",
-      "        <div class=\"floatright margin-r-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\"></i></div>",
-      "      </div>",
+      "      <div class=\"fechar-form\" title=\"Fechar formulário\"></div>",
       "      <script type=\"text/javascript\">",
       "        $(function(){",
       "          const formulario = $('#<%=App%>_form');",
-      "          $('div.linhaseparadora').find('i.fa-angle-double-up').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){ $(this).html(''); }); });",
+      "          formulario.next('.fechar-form').on('click', function(){ fecharFormulario(formulario); });",
       "          formulario.validar({",
       "            <% if p = \"visualizar\" then %>",
       "              formLeitura: true,",
@@ -123,7 +120,7 @@
       "                function(res){",
       "                  if(res.result.toLowerCase() === 'ok'){",
       "                    msgcarregando($('#<%=DivListagem%>'));",
-      "                    $('#<%=DivAcoes%>').slideUp('slow', function(){ $(this).html(''); });",
+      "                    fecharFormulario(formulario);",
       "                    $.post(",
       "                      '<%=PaginaAtual%>',",
       "                      { '<%=SeletorPaginas%>': '<%=SeletorListar%>' },",
@@ -184,10 +181,11 @@
       "    Case else",
       "%>",
       "      <div class=\"listar-pesquisa\">",
-      "        <input id=\"<%=App%>_search\" type=\"hidden\" name=\"search\">",
       "        <div class=\"listar-pesquisa-item\">",
       "          <span class=\"listar-pesquisa-export excel\" onclick=\"downloadExcel('<%=App%>_tabela', 'nome_ficheiro')\">Exportar Listagem</span>",
-      "          <span class=\"listar-pesquisa-item\">|</span>",
+      "        </div>",
+      "        <div class=\"listar-pesquisa-item\">|</div>",
+      "        <div class=\"listar-pesquisa-item\">",
       "          <span class=\"listar-pesquisa-print\" onclick=\"imprimirListagem('<%=App%>_tabela', 'Listagem Registos')\">Imprimir listagem</span>",
       "        </div>",
       "        <div class=\"listar-pesquisa-item\">|</div>",
@@ -242,10 +240,7 @@
   "Fechar HTML": {
     "prefix": "AI-fechar-html",
     "body": [
-      "<div class=\"linhaseparadora\">",
-      "  <div class=\"floatleft margin-l-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\"></i></div>",
-      "  <div class=\"floatright margin-r-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\"></i></div>",
-      "</div>"
+      "<div class=\"fechar-form\" title=\"Fechar formulário\"></div>"
     ],
     "description": "HTML com setas indicadores para fechar div"
   },
@@ -463,14 +458,11 @@
       "    $0",
       "  </ol>",
       "</form>",
-      "<div class=\"linhaseparadora\">",
-      "  <div class=\"floatleft margin-l-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\"></i></div>",
-      "  <div class=\"floatright margin-r-40\"><i class=\"fa fa-angle-double-up cursor-mao\" title=\"Fechar\"></i></div>",
-      "</div>",
+      "<div class=\"fechar-form\" title=\"Fechar formulário\"></div>",
       "<script type=\"text/javascript\">",
       "  $(function(){",
       "    const formulario = $('#<%=App%>_$1');",
-      "    $('div.linhaseparadora').find('i.fa-angle-double-up').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){ $(this).html(''); }); });",
+      "    formulario.next('.fechar-form').on('click', function(){ fecharFormulario(formulario); });",
       "    formulario.validar({",
       "      <% if p = \"visualizar\" then %>",
       "        formLeitura: true,",
@@ -658,7 +650,7 @@
       "Set ligacao = Server.CreateObject(\"ADODB.Connection\")",
       "ligacao.Open ${1|conexao,conexaoconsultas,conexaocaaf,conexaointranet,conexaocdm,conexaofeac,conexaologs,conexaoestatisticas,conexaorelogiodeponto,conexaocompamid,conexaocrp,conexaodev,conexaoidq,conexaosgc,conexaosiads,conexaoemrrci,conexaoplataforma,conexaoSAPA|}",
       "If Err.Number <> 0 then",
-      "  logerros(Err.Description & vbTab & $1)",
+      "  logerros(Err.Description)",
       "  Err.Clear",
       "End If"
     ],
@@ -667,7 +659,7 @@
   "Fechar Objeto": {
     "prefix": "AI-fechar-objeto",
     "body": [
-      "${1|ligacao,rs|}.close : Set $1 = Nothing$2"
+      "${1|ligacao,rs|}.close : Set $1 = Nothing"
     ],
     "description": "Fechar objeto de asp"
   },

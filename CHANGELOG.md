@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.10]
+
+- Removido print de ligações nos logs
+
 ## [1.1.9]
 
 - Adicionado tipos de campo em **_AI-ListarDados-AddCampo_**

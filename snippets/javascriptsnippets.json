@@ -1,7 +1,7 @@
 {
   "Fechar JS": {
     "prefix": "AI-fechar-js",
-    "body": "$('div.linhaseparadora').find('i').on('click', function(){ $('#<%=DivAcoes%>').slideUp('slow', function(){$(this).html('');})});",
+    "body": "formulario.next('.fechar-form').on('click', function(){ fecharFormulario(formulario); });",
     "description": "Script para fechar o DivAcoes"
   },
   "Novo jModal": {
