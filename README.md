@@ -14,6 +14,7 @@ Snippets específicos para Aplicações Informáticas
 | ----------------------------------- | ------------------------------------------------ |
 | `AI-nova-pagina`                    | Nova Página                                      |
 | `AI-fechar-html`                    | Fechar HTML                                      |
+| `AI-form-base`                      | Formulario                                       |
 | `AI-form-separador`                 | Separador formulário                             |
 | `AI-form-ilha-concelho-freguesia`   | Inputs distrito, concelho e freguesia            |
 | `AI-form-select`                    | Input select                                     |
@@ -30,7 +31,6 @@ Snippets específicos para Aplicações Informáticas
 | `AI-form-radio-simnao`              | Input radio sim não                              |
 | `AI-form-textarea`                  | Input textarea                                   |
 | `AI-outros-dados-form`              | Outros dados                                     |
-| `AI-formulario-base`                | Formulario                                       |
 | `AI-tabs`                           | Tabuladores                                      |
 | `AI-SQLDados-All-In-One`            | SQLDados todos em um                             |
 | `AI-SQLDados`                       | SQLDados                                         |

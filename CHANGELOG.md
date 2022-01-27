@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.11]
+
+- Ajustes de html
+
 ## [1.1.10]
 
 - Removido print de ligações nos logs

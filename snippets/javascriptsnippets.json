@@ -2,7 +2,7 @@
   "Fechar JS": {
     "prefix": "AI-fechar-js",
     "body": "formulario.next('.fechar-form').on('click', function(){ fecharFormulario(formulario); });",
-    "description": "Script para fechar o DivAcoes"
+    "description": "Script para fechar o Div Ações"
   },
   "Novo jModal": {
     "prefix": "AI-jmodal",
