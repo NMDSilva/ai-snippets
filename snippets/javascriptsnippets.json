@@ -48,5 +48,14 @@
       ");"
     ],
     "description": "Código JS para carregar JSON em select"
+  },
+  "Carregar tabela Select fixo": {
+    "prefix": "AI-js-select",
+    "body": [
+      "const campo${1:Nome} = $('#<%=App%>_${2:campo}');",
+      "const lista${1:Nome} = <%=QueryToJSON(ligacao, \"SELECT ${3:id} AS value, ${4:campo} AS text FROM ${5:tabela} ORDER BY ${4:campo}\").jsString%>;",
+      "jsonToSelect(campo${1:Nome}, lista${1:Nome});"
+    ],
+    "description": "Código JS para carregar objecto em select"
   }
 }
