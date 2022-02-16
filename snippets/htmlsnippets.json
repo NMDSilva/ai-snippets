@@ -250,15 +250,15 @@
     "body": [
       "<li>",
       "  <label for=\"<%=App%>_${1:id_distrito}\">${2:Ilha}</label>",
-      "  <select id=\"<%=App%>_$1\" name=\"$1\" data-tipo=\"selectid\" data-tabela=\"{EA6CF4AC-9A84-4FC9-8208-89117A7E9002}\" data-filho=\"<%=App%>_${5:id_concelho}\"${3: class=\"obrigatorio\"}${4: data-selecionado=\"<%=$1%>\"}><option value=\"\">A Carregar...</option></select>",
+      "  <select id=\"<%=App%>_$1\" name=\"$1\" data-tipo=\"select\" data-tabela=\"{EA6CF4AC-9A84-4FC9-8208-89117A7E9002}\" data-filho=\"<%=App%>_${5:id_concelho}\"${3: class=\"obrigatorio\"}${4: data-selecionado=\"<%=$1%>\"}><option value=\"\">A Carregar...</option></select>",
       "</li>",
       "<li>",
       "  <label for=\"<%=App%>_$5\">${6:Concelho}</label>",
-      "  <select id=\"<%=App%>_$5\" name=\"$5\" data-tipo=\"selectid\" data-tabela=\"{046ADB92-A93D-46A2-B69D-7BF93DF1CFB2}\" data-filho=\"<%=App%>_${9:id_freguesia}\"${7: class=\"obrigatorio\"}${8: data-selecionado=\"<%=$5%>\"}><option value=\"\">Por favor escolha a Ilha...</option></select>",
+      "  <select id=\"<%=App%>_$5\" name=\"$5\" data-tipo=\"select\" data-tabela=\"{046ADB92-A93D-46A2-B69D-7BF93DF1CFB2}\" data-filho=\"<%=App%>_${9:id_freguesia}\"${7: class=\"obrigatorio\"}${8: data-selecionado=\"<%=$5%>\"}><option value=\"\">Por favor escolha a Ilha...</option></select>",
       "</li>",
       "<li>",
       "  <label for=\"<%=App%>_$9\">${10:Freguesia}</label>",
-      "  <select id=\"<%=App%>_$9\" name=\"$9\" data-tipo=\"selectid\" data-tabela=\"{7146DE3B-7C02-4E9F-8D64-95ABC4538EB8}\"${11: class=\"obrigatorio\"}${12: data-selecionado=\"<%=$9%>\"}><option value=\"\">Por favor escolha a Concelho...</option></select>",
+      "  <select id=\"<%=App%>_$9\" name=\"$9\" data-tipo=\"select\" data-tabela=\"{7146DE3B-7C02-4E9F-8D64-95ABC4538EB8}\"${11: class=\"obrigatorio\"}${12: data-selecionado=\"<%=$9%>\"}><option value=\"\">Por favor escolha a Concelho...</option></select>",
       "</li>"
     ],
     "description": "HTML para formulário, campos distrito, concelho e freguesia já encadeados"
@@ -268,7 +268,7 @@
     "body": [
       "<li>",
       "  <label for=\"<%=App%>_$1\">${2:Select}</label>",
-      "  <select id=\"<%=App%>_$1\" name=\"$1\"${3: class=\"obrigatorio\"} data-tipo=\"selectid\" data-tabela=\"${4:Consultar ID ou criar em NAI > AI > Gestão caixas de listagem}\"${5: data-selecionado=\"<%=$1%>\"}><option value=\"\">A Carregar...</option></select>",
+      "  <select id=\"<%=App%>_$1\" name=\"$1\"${3: class=\"obrigatorio\"} data-tipo=\"select\" data-tabela=\"${4:Consultar ID ou criar em NAI > AI > Gestão caixas de listagem}\"${5: data-selecionado=\"<%=$1%>\"}><option value=\"\">A Carregar...</option></select>",
       "</li>"
     ],
     "description": "HTML para formulário, select para tabela"

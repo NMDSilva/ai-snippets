@@ -2,13 +2,17 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.13]
+
+- Ajustes HTML
+
 ## [1.1.12]
 
 - Novo snippet **_AI-js-select_**
 
 ## [1.1.11]
 
-- Ajustes de html
+- Ajustes de HTML
 
 ## [1.1.10]
 
