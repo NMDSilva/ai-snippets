@@ -2,7 +2,7 @@
   "name": "aisnippets",
   "displayName": "AI-Snippets",
   "description": "Snippets para Aplicações Informáticas",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "publisher": "NMSilva",
   "repository": {
     "type": "git",
@@ -33,5 +33,8 @@
         "path": "./snippets/javascriptsnippets.json"
       }
     ]
+  },
+  "dependencies": {
+    "vsce": "^2.7.0"
   }
 }

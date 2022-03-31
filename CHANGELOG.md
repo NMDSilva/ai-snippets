@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.14]
+
+- Ajustes HTML e passagem de SQLDados.v2 para SQLDados
+
 ## [1.1.13]
 
 - Ajustes HTML
