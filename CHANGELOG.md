@@ -2,6 +2,14 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.16]
+
+- Reajuste na informação dos dados
+
+## [1.1.15]
+
+- Integração de ListarDados.v2 em ListarDados
+
 ## [1.1.14]
 
 - Ajustes HTML e passagem de SQLDados.v2 para SQLDados
