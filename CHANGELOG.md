@@ -2,6 +2,10 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.17]
+
+- Normalização de snippets para as novas regras implementadas
+
 ## [1.1.16]
 
 - Reajuste na informação dos dados

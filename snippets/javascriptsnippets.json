@@ -1,48 +1,47 @@
 {
   "Fechar JS": {
-    "prefix": "AI-fechar-js",
-    "body": "formulario.next('.fechar-form').on('click', function(){ fecharFormulario(formulario); });",
-    "description": "Script para fechar o Div Ações"
+    "prefix": "ai-fechar-js",
+    "body": "formulario.next('.fechar-form').on('click', function () { fecharFormulario(formulario) });",
+    "description": "Script para fechar o div ações"
   },
   "Novo jModal": {
-    "prefix": "AI-jmodal",
+    "prefix": "ai-jmodal",
     "body": [
       "$.fn.jmodal({",
-      "  initWidth: ((window.innerWidth < 800) ? 600 : window.innerWidth-300),",
+      "  initWidth: ((window.innerWidth < 800) ? 600 : window.innerWidth - 300),",
       "  title: \"<span class='soleituratopo'>${1:Titulo jModal}</span>\",",
       "  content: function(e){",
-      "    e.html('<div id=\"<%=App%>_jmodal\" class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
+      "    e.html('<div id=\"<%=app%>_jmodal\" class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
       "    $.post(",
-      "      '<%=PaginaAtual%>',",
-      "      { '<%=SeletorPaginas%>': '${2:pagina a carregar}' },",
-      "      function(data){ $('#<%=App%>_jmodal').html(data); }",
+      "      '<%=pagina_atual%>',",
+      "      { '<%=seletor_paginas%>': '${2:pagina a carregar}' },",
+      "      function (data) { $('#<%=app%>_jmodal').html(data) }",
       "    );",
       "  },",
       "  buttonText: { ok: 'OK', cancel: 'Fechar' },",
-      "  okEvent: function(obj, args){ args.complete(); },",
-      "  cancelEvent: function(obj, args){ args.complete(); }",
+      "  okEvent: function (obj, args) { args.complete() },",
+      "  cancelEvent: function (obj, args) { args.complete() }",
       "});",
-      "${3:$('#JmodelCancel').hide();}",
-      "${4:$('#JmodelOK').hide();}"
+      "${3:$('#JmodelCancel').hide()}",
+      "${4:$('#JmodelOK').hide()}",
+      "$0"
     ],
     "description": "Javascript para criação de uma janela de jmodal"
   },
   "Fechar jModal": {
-    "prefix": "AI-jmodal-esconder-fechar",
+    "prefix": "ai-jmodal-esconder-fechar",
     "body": "$.fn.hideJmodal();",
     "description": "Script para esconder o botão fechar do jmodal"
   },
   "JSON To Select": {
-    "prefix": "AI-json-to-select",
+    "prefix": "ai-json-to-select",
     "body": [
       "$.post(",
-      "  '<%=PaginaAtual%>',",
-      "  { '<%=SeletorPaginas%>': '${1:CAMPO_CASE}' },",
-      "  function(res){",
-      "    if (res.result.toLowerCase() === 'ok'){",
-      "      jsonToSelect(${2:objSelect}, res.dados);",
-      "    }",
-      "    else{ alertify.error(res.msg); }",
+      "  '<%=pagina_atual%>',",
+      "  { '<%=seletor_paginas%>': '$1' },",
+      "  function (res) {",
+      "    if (res.result.toLowerCase() === 'ok') { jsonToSelect($2, res.dados) }",
+      "    else { alertify.error(res.msg) }",
       "  },",
       "  'json'",
       ");"
@@ -50,12 +49,33 @@
     "description": "Código JS para carregar JSON em select"
   },
   "Carregar tabela Select fixo": {
-    "prefix": "AI-js-select",
+    "prefix": "ai-js-select",
     "body": [
       "const campo${1:Nome} = $('#<%=App%>_${2:campo}');",
-      "const lista${1:Nome} = <%=QueryToJSON(ligacao, \"SELECT ${3:id} AS value, ${4:campo} AS text FROM ${5:tabela} ORDER BY ${4:campo}\").jsString%>;",
-      "jsonToSelect(campo${1:Nome}, lista${1:Nome});"
+      "const lista${1}s = <%=querytojson(ligacao, \"SELECT ${3:id} AS value, ${4:campo} AS text FROM ${5:tabela} ORDER BY ${4}\").jsString%>;",
+      "jsonToSelect(campo${1}, lista${1}s);"
     ],
     "description": "Código JS para carregar objecto em select"
+  },
+  "Post json": {
+    "prefix": "ai-post-json",
+    "body": [
+      "$.post(",
+      "  '<%=pagina_atual%>',",
+      "  {",
+      "    '<%=seletor_paginas%>': '$1',",
+      "    $2",
+      "  },",
+      "  function (res) {",
+      "    if (res.result.toLowerCase() === 'ok') {",
+      "      alertify.success(res.msg);",
+      "      $0",
+      "    }",
+      "    else { alertify.error(res.msg) }",
+      "  },",
+      "  'json'",
+      ");"
+    ],
+    "description": "consulta de json"
   }
 }

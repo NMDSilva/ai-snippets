@@ -1,5 +1,3 @@
-[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/NMSilva.aisnippets.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=NMSilva.aisnippets)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/NMSilva.aisnippets.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=NMSilva.aisnippets)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 # AI-Snippets README
@@ -12,46 +10,47 @@ Snippets específicos para Aplicações Informáticas
 
 | Snippet                             | Descrição                                         |
 | ----------------------------------- | ------------------------------------------------- |
-| `AI-nova-pagina`                    | Nova Página                                       |
-| `AI-fechar-html`                    | Fechar HTML                                       |
-| `AI-form-base`                      | Formulario                                        |
-| `AI-form-separador`                 | Separador formulário                              |
-| `AI-form-ilha-concelho-freguesia`   | Inputs distrito, concelho e freguesia             |
-| `AI-form-select`                    | Input select                                      |
-| `AI-form-select-simnao`             | Input select sim não                              |
-| `AI-form-geral`                     | Input geral                                       |
-| `AI-form-data-nascimento-com-idade` | Input data nascimento                             |
-| `AI-form-nissws`                    | Input NISSWS                                      |
-| `AI-form-nifws`                     | Input NIFWS                                       |
-| `AI-form-sexo`                      | Input sexo                                        |
-| `AI-form-upload`                    | Input upload                                      |
-| `AI-form-file`                      | Input upload                                      |
-| `AI-form-radio-checkbox`            | Input radio ou checkbox                           |
-| `AI-form-radio-checkbox-tabela`     | Input radio ou checkbox a partir de tabela        |
-| `AI-form-radio-simnao`              | Input radio sim não                               |
-| `AI-form-textarea`                  | Input textarea                                    |
-| `AI-outros-dados-form`              | Outros dados                                      |
-| `AI-tabs`                           | Tabuladores                                       |
-| `AI-SQLDados-All-In-One`            | SQLDados todos em um                              |
-| `AI-SQLDados`                       | SQLDados                                          |
-| `AI-ListarDados`                    | ListarDados                                       |
-| `AI-ListarDados-AddCampo`           | ListarDados - Adicionar Campo                     |
-| `AI-ListarDados-AddAcoes`           | ListarDados - Adicionar Ação                      |
-| `AI-listar-json-asp`                | Código ASP para carregar JSON com dados de Tabela |
-| `AI-abrir-ligacao`                  | Abrir Ligação                                     |
-| `AI-fechar-objeto`                  | Fechar Objeto                                     |
-| `AI-Executar-Stored-Procedure`      | Execução de Stored Procedure                      |
-| `AI-retornar-valor`                 | Retornar Valor                                    |
+| `ai-nova-pagina`                    | Nova Página                                       |
+| `ai-fechar-html`                    | Fechar HTML                                       |
+| `ai-form-separador`                 | Separador formulário                              |
+| `ai-form-ilha-concelho-freguesia`   | Inputs distrito, concelho e freguesia             |
+| `ai-form-select`                    | Input select                                      |
+| `ai-form-select-simnao`             | Input select sim não                              |
+| `ai-form-geral`                     | Input geral                                       |
+| `ai-form-data-nascimento-com-idade` | Input data nascimento                             |
+| `ai-form-nissws`                    | Input NISSWS                                      |
+| `ai-form-nifws`                     | Input NIFWS                                       |
+| `ai-form-sexo`                      | Input sexo                                        |
+| `ai-form-upload`                    | Input upload                                      |
+| `ai-form-radio-checkbox`            | Input radio ou checkbox                           |
+| `ai-form-radio-checkbox-tabela`     | Input radio ou checkbox a partir de tabela        |
+| `ai-form-radio-simnao`              | Input radio sim não                               |
+| `ai-form-textarea`                  | Input textarea                                    |
+| `ai-outros-dados-form`              | Outros dados                                      |
+| `ai-formulario-base`                | Formulario                                        |
+| `ai-tabs`                           | Tabuladores                                       |
+| `ai-sqldados-all-in-one`            | SQLDados todos em um                              |
+| `ai-sqldados`                       | SQLDados                                          |
+| `ai-listardados`                    | ListarDados                                       |
+| `ai-listardados-addcampo`           | ListarDados - Adicionar Campo                     |
+| `ai-listardados-addacoes`           | ListarDados - Adicionar Ação                      |
+| `ai-listar-json-asp`                | Código ASP para carregar JSON com dados de Tabela |
+| `ai-abrir-ligacao`                  | Abrir Ligação                                     |
+| `ai-fechar-objeto`                  | Fechar Objeto                                     |
+| `ai-executar-stored-procedure`      | Execução de Stored Procedure                      |
+| `ai-listar-sql`                     | Listar SQL                                        |
+| `rss`                               | Carregar variável com dados de rs                 |
 
 ## Javascript
 
 | Snippet                     | Descrição                                 |
 | --------------------------- | ----------------------------------------- |
-| `AI-fechar-js`              | Fechar JS                                 |
-| `AI-jmodal`                 | Novo jModal                               |
-| `AI-jmodal-esconder-fechar` | Fechar jModal                             |
-| `AI-json-to-select`         | Código JS para carregar JSON em select    |
-| `AI-js-select`              | Código JS para carregar objecto em select |
+| `ai-fechar-js`              | Fechar JS                                 |
+| `ai-jmodal`                 | Novo jModal                               |
+| `ai-jmodal-esconder-fechar` | Fechar jModal                             |
+| `ai-json-to-select`         | Código JS para carregar JSON em select    |
+| `ai-js-select`              | Código JS para carregar objecto em select |
+| `ai-post-json`              | Código JS para pedido post                |
 
 # Autor
 
