@@ -2,6 +2,14 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.19]
+
+- Normalização de função
+
+## [1.1.18]
+
+- Normalização de funções
+  
 ## [1.1.17]
 
 - Normalização de snippets para as novas regras implementadas
