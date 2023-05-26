@@ -2,7 +2,7 @@
   "name": "aisnippets",
   "displayName": "AI-Snippets",
   "description": "Snippets para Aplicações Informáticas",
-  "version": "1.1.19",
+  "version": "1.1.24",
   "publisher": "NMSilva",
   "repository": {
     "type": "git",
@@ -16,7 +16,10 @@
     "Snippets"
   ],
   "scripts": {
-    "compile": "vsce package"
+    "start": "npm run open && npm run explorer && npm run compile",
+    "compile": "vsce package",
+    "open": "start chrome https://marketplace.visualstudio.com/manage/publishers/nmsilva",
+    "explorer": "start explorer ."
   },
   "contributes": {
     "snippets": [

@@ -2,6 +2,21 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.24]
+- Normalização de snippets
+
+## [1.1.23]
+- Erro nas variáveis de consulta
+
+## [1.1.22]
+- atualização de variáveis conexão
+
+## [1.1.21]
+- erro no snippet ai-nova-pagina
+
+## [1.1.20]
+- Função querytojson => query_para_json
+
 ## [1.1.19]
 
 - Normalização de função

@@ -1,7 +1,7 @@
 {
   "Fechar JS": {
     "prefix": "ai-fechar-js",
-    "body": "formulario.next('.fechar-form').on('click', function () { fecharFormulario(formulario) });",
+    "body": "formulario.next('.fechar-form').on('click', () => { fecharFormulario(formulario) });",
     "description": "Script para fechar o div ações"
   },
   "Novo jModal": {
@@ -40,8 +40,9 @@
       "  '<%=pagina_atual%>',",
       "  { '<%=seletor_paginas%>': '$1' },",
       "  function (res) {",
-      "    if (res.result.toLowerCase() === 'ok') { jsonToSelect($2, res.dados) }",
-      "    else { alertify.error(res.msg) }",
+      "    res.result !== 'ok'",
+      "      ? alertify.error(res.msg)",
+      "      : jsonToSelect($2, res.dados);",
       "  },",
       "  'json'",
       ");"
@@ -51,8 +52,8 @@
   "Carregar tabela Select fixo": {
     "prefix": "ai-js-select",
     "body": [
-      "const campo${1:Nome} = $('#<%=App%>_${2:campo}');",
-      "const lista${1}s = <%=querytojson(ligacao, \"SELECT ${3:id} AS value, ${4:campo} AS text FROM ${5:tabela} ORDER BY ${4}\").jsString%>;",
+      "const campo${1:Nome} = $('#<%=app%>_${2:campo}');",
+      "const lista${1}s = <%=query_para_json(ligacao, \"SELECT ${3:id} AS value, ${4:campo} AS text FROM ${5:tabela} ORDER BY ${4}\").jsstring%>;",
       "jsonToSelect(campo${1}, lista${1}s);"
     ],
     "description": "Código JS para carregar objecto em select"
@@ -67,11 +68,12 @@
       "    $2",
       "  },",
       "  function (res) {",
-      "    if (res.result.toLowerCase() === 'ok') {",
-      "      alertify.success(res.msg);",
-      "      $0",
+      "    if (res.result !== 'ok') {",
+      "      alertify.error(res.msg)",
+      "      return",
       "    }",
-      "    else { alertify.error(res.msg) }",
+      "    alertify.success(res.msg);",
+      "    $0",
       "  },",
       "  'json'",
       ");"
