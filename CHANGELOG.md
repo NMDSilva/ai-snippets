@@ -2,7 +2,7 @@
 
 Todas as alterações "aisnippets"
 
-## [1.2]
+## [1.1.25]
 - Novos snippets
 
 ## [1.1.24]
