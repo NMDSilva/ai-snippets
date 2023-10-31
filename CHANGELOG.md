@@ -2,6 +2,9 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.27]
+- Correção de erro
+
 ## [1.1.26]
 - Correção de erro
 

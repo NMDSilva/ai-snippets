@@ -797,8 +797,13 @@
   },
   "tipo de campo ASP - bigint": {
     "prefix": "tipo_campo_bigint",
-    "body": "131",
+    "body": "20",
     "description": "tipo campo bigint"
+  },
+  "tipo de campo ASP - numeric": {
+    "prefix": "tipo_campo_numeric",
+    "body": "131",
+    "description": "tipo campo numeric"
   },
   "tipo de campo ASP - varchar": {
     "prefix": "tipo_campo_varchar",
@@ -809,7 +814,7 @@
     "prefix": "tipo_campo_precisao",
     "body": [
       "with .parameters(\"@$1\")",
-      "  .precision = 11",
+      "  .precision = ${2:11}",
       "  .numericscale = 0",
       "end with"
     ],
@@ -827,7 +832,7 @@
       "set idu_obj = new idu_class",
       "",
       "idu_obj.nome_campo = \"${1:campo_idu}\"",
-      "idu_obj.idu = \"${2:variavel_idu}\"",
+      "idu_obj.idu = ${2:variavel_idu}",
       "idu_obj.pode_editar = ${3|false,true|}",
       "idu_obj.aceita_ps = ${4|true,false|}",
       "idu_obj.aceita_pc = ${5|false,true|}",
