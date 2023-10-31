@@ -39,7 +39,15 @@ Snippets específicos para Aplicações Informáticas
 | `ai-fechar-objeto`                  | Fechar Objeto                                     |
 | `ai-executar-stored-procedure`      | Execução de Stored Procedure                      |
 | `ai-listar-sql`                     | Listar SQL                                        |
+| `ai-idu`                            | AI IDU                                            |
 | `rss`                               | Carregar variável com dados de rs                 |
+| `tipo_campo_smallint`               | Tipo de campo em numérico ASP                     |
+| `tipo_campo_int`                    | Tipo de campo em numérico ASP                     |
+| `tipo_campo_tinyint`                | Tipo de campo em numérico ASP                     |
+| `tipo_campo_uniqueidentifier`       | Tipo de campo em numérico ASP                     |
+| `tipo_campo_bigint`                 | Tipo de campo em numérico ASP                     |
+| `tipo_campo_varchar`                | Tipo de campo em numérico ASP                     |
+| `tipo_campo_precisao`               | Tipo de campo em adicionar precisão ASP           |
 
 ## Javascript
 

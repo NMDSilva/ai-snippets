@@ -2,6 +2,9 @@
 
 Todas as alterações "aisnippets"
 
+## [1.2]
+- Novos snippets
+
 ## [1.1.24]
 - Normalização de snippets
 

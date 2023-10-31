@@ -11,11 +11,11 @@
       "  initWidth: ((window.innerWidth < 800) ? 600 : window.innerWidth - 300),",
       "  title: \"<span class='soleituratopo'>${1:Titulo jModal}</span>\",",
       "  content: function(e){",
-      "    e.html('<div id=\"<%=app%>_jmodal\" class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
+      "    e.html('<div class=\"margin-5\"><i class=\"fa fa-load-pequeno fa-2x margin-r-10 \"/><span class=\"soleitura\">A carregar... Por favor aguarde.</span></div>');",
       "    $.post(",
       "      '<%=pagina_atual%>',",
       "      { '<%=seletor_paginas%>': '${2:pagina a carregar}' },",
-      "      function (data) { $('#<%=app%>_jmodal').html(data) }",
+      "      function (data) { e.html(data) }",
       "    );",
       "  },",
       "  buttonText: { ok: 'OK', cancel: 'Fechar' },",
@@ -52,7 +52,7 @@
   "Carregar tabela Select fixo": {
     "prefix": "ai-js-select",
     "body": [
-      "const campo${1:Nome} = $('#<%=app%>_${2:campo}');",
+      "const campo${1:Nome} = $('#<%=app%>_${1/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+_}${2:/downcase}/g}');",
       "const lista${1}s = <%=query_para_json(ligacao, \"SELECT ${3:id} AS value, ${4:campo} AS text FROM ${5:tabela} ORDER BY ${4}\").jsstring%>;",
       "jsonToSelect(campo${1}, lista${1}s);"
     ],

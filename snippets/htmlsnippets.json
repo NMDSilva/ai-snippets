@@ -313,7 +313,7 @@
     "prefix": "ai-form-select-simnao",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_select}\">${2:Select}</label>",
+      "  <label for=\"<%=app%>_${1:id_select}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <select",
       "    id=\"<%=app%>_$1\"",
       "    name=\"$1\"",
@@ -334,7 +334,7 @@
     "prefix": "ai-form-geral",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_campo}\">${2:Titulo campo}</label>",
+      "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <input",
       "    type=\"text\"",
       "    id=\"<%=app%>_$1\"",
@@ -353,7 +353,7 @@
     "prefix": "ai-form-data-nascimento-com-idade",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_campo}\">${2:Titulo campo}</label>",
+      "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <input",
       "    type=\"text\"",
       "    id=\"<%=app%>_$1\"",
@@ -376,7 +376,7 @@
     "prefix": "ai-form-nissws",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_campo}\">${2:Titulo campo}</label>",
+      "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <input",
       "    type=\"text\"",
       "    id=\"<%=app%>_$1\"",
@@ -397,7 +397,7 @@
     "prefix": "ai-form-nifws",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_campo}\">${2:Titulo campo}</label>",
+      "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <input",
       "    type=\"text\"",
       "    id=\"<%=app%>_$1\"",
@@ -416,7 +416,7 @@
     "prefix": "ai-form-sexo",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_campo}\">${2:Titulo campo}</label>",
+      "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <select id=\"<%=app%>_$1\" name=\"$1\" data-tipo=\"select\" class=\"${3:obrigatorio}\" data-preenchimento=\"<%=$1%>\">",
       "    <option value=\"\">Escolha um Item...</option>",
       "    <option value=\"F\">Feminino</option>",
@@ -431,7 +431,7 @@
     "prefix": "ai-form-upload",
     "body": [
       "<li>",
-      "  <label for=\"<%=app%>_${1:id_campo}\">${2:Titulo Campo}</label>",
+      "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
       "  <input id=\"<%=app%>_$1\" name=\"$1\" type=\"file\" data-tipo=\"upload\" data-extensoes=\"${3:png|jpeg|jpg|gif}\" class=\"${4:obrigatorio}\" data-tamanho=\"$5\"/>",
       "</li>",
       "$0"
@@ -762,8 +762,7 @@
       "with comando_sql",
       "  .activeconnection = ligacao",
       "  .commandtext = sql_listar",
-      "  tipo_campo = ${2|2 'smallint,3 'int,16 'tinyint,72 'uniqueidentifier,131 'bigint,200 'varchar|}",
-      "  .parameters.append .createparameter(\"@id\", tipo_campo, 1, ${3:tamanho_campo}, id)",
+      "  .parameters.append .createparameter(\"@id\", ${2:tipo_campo_}, 1, ${3:tamanho_campo}, id)",
       "  set rs_listar = .execute",
       "end with",
       "if not rs_listar.eof then",
@@ -776,12 +775,73 @@
       "rs_listar.close : set rs_listar = nothing"
     ]
   },
+  "tipo de campo ASP - smallint": {
+    "prefix": "tipo_campo_smallint",
+    "body": "2",
+    "description": "tipo campo smallint"
+  },
+  "tipo de campo ASP - int": {
+    "prefix": "tipo_campo_int",
+    "body": "3",
+    "description": "tipo campo int"
+  },
+  "tipo de campo ASP - tinyint": {
+    "prefix": "tipo_campo_tinyint",
+    "body": "16",
+    "description": "tipo campo tinyint"
+  },
+  "tipo de campo ASP - uniqueidentifier": {
+    "prefix": "tipo_campo_uniqueidentifier",
+    "body": "72",
+    "description": "tipo campo uniqueidentifier"
+  },
+  "tipo de campo ASP - bigint": {
+    "prefix": "tipo_campo_bigint",
+    "body": "131",
+    "description": "tipo campo bigint"
+  },
+  "tipo de campo ASP - varchar": {
+    "prefix": "tipo_campo_varchar",
+    "body": "200",
+    "description": "tipo campo varchar"
+  },
+  "tipo de campo ASP - precisao": {
+    "prefix": "tipo_campo_precisao",
+    "body": [
+      "with .parameters(\"@$1\")",
+      "  .precision = 11",
+      "  .numericscale = 0",
+      "end with"
+    ],
+    "description": "tipo campo precisao"
+  },
   "carregar variavel": {
     "prefix": "rss",
-    "body": [
-      "$1 = rs_listar(\"$1\")",
-      "$0"
-    ],
+    "body": "$1 = rs_listar(\"$1\")",
     "description": "rs_listar campo"
+  },
+  
+  "IDU": {
+    "prefix": "ai-idu",
+    "body": [
+      "set idu_obj = new idu_class",
+      "",
+      "idu_obj.nome_campo = \"${1:campo_idu}\"",
+      "idu_obj.idu = \"${2:variavel_idu}\"",
+      "idu_obj.pode_editar = ${3|false,true|}",
+      "idu_obj.aceita_ps = ${4|true,false|}",
+      "idu_obj.aceita_pc = ${5|false,true|}",
+      "idu_obj.separador_morada = ${6|true,false|}",
+      "idu_obj.separador_contactos = ${7|false,true|}",
+      "idu_obj.separador_documento_id = ${8|false,true|}",
+      "idu_obj.separador_id_complementar = ${9|false,true|}",
+      "idu_obj.separador_iban = ${10|false,true|}",
+      "",
+      "idu_obj.start()",
+      "",
+      "set idu_obj = nothing"
+    ],
+    "description": "IDU class"
   }
+  
 }
