@@ -906,7 +906,7 @@
     "description": "IDU class"
   },
   "IDU-aceita_pc": {
-    "prefix": "ai-idu-aceita-ps",
+    "prefix": "ai-idu-aceita-pc",
     "body": "idu_obj.aceita_pc = ${1|true,false|}",
     "description": "IDU class"
   },
