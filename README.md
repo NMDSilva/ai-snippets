@@ -38,16 +38,28 @@ Snippets específicos para Aplicações Informáticas
 | `ai-abrir-ligacao`                  | Abrir Ligação                                     |
 | `ai-fechar-objeto`                  | Fechar Objeto                                     |
 | `ai-executar-stored-procedure`      | Execução de Stored Procedure                      |
+| `ai-rs-dados-select`                | Command para select                               |
+| `ai-parametro`                      | Parametro para command                            |
 | `ai-listar-sql`                     | Listar SQL                                        |
-| `ai-idu`                            | AI IDU                                            |
-| `rss`                               | Carregar variável com dados de rs                 |
-| `tipo_campo_smallint`               | Tipo de campo em numérico ASP                     |
-| `tipo_campo_int`                    | Tipo de campo em numérico ASP                     |
-| `tipo_campo_tinyint`                | Tipo de campo em numérico ASP                     |
-| `tipo_campo_uniqueidentifier`       | Tipo de campo em numérico ASP                     |
-| `tipo_campo_bigint`                 | Tipo de campo em numérico ASP                     |
-| `tipo_campo_varchar`                | Tipo de campo em numérico ASP                     |
+| `tipo_campo_smallint`               | Tipo de campo smallint em numérico ASP            |
+| `tipo_campo_int`                    | Tipo de campo int em numérico ASP                 |
+| `tipo_campo_tinyint`                | Tipo de campo tinyint em numérico ASP             |
+| `tipo_campo_uniqueidentifier`       | Tipo de campo uniqueidentifier em numérico ASP    |
+| `tipo_campo_bigint`                 | Tipo de campo bigint em numérico ASP              |
+| `tipo_campo_numeric`                | Tipo de campo numeric em numérico ASP             |
+| `tipo_campo_data`                   | Tipo de campo data em numérico ASP                |
+| `tipo_campo_varchar`                | Tipo de campo varchar em numérico ASP             |
 | `tipo_campo_precisao`               | Tipo de campo em adicionar precisão ASP           |
+| `rss`                               | Carregar variável com dados de rs                 |
+| `ai-idu`                            | AI IDU                                            |
+| `ai-idu-pode-editar`                | AI IDU - Pode editar                              |
+| `ai-idu-aceita-ps`                  | AI IDU - Aceita PS                                |
+| `ai-idu-aceita-pc`                  | AI IDU - Aceita PC                                |
+| `ai-idu-separador-morada`           | AI IDU - Separador Morada                         |
+| `ai-idu-separador-contactos`        | AI IDU - Separador Contactos                      |
+| `ai-idu-separador-documento-id`     | AI IDU - Separador Documento ID                   |
+| `ai-idu-separador-id-complementar`  | AI IDU - Separador ID complementar                |
+| `ai-idu-separador-iban`             | AI IDU - Separador IBAN                           |
 
 ## Javascript
 

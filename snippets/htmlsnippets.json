@@ -421,7 +421,13 @@
     "body": [
       "<li>",
       "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
-      "  <select id=\"<%=app%>_$1\" name=\"$1\" data-tipo=\"select\" class=\"${3:obrigatorio}\" data-preenchimento=\"<%=$1%>\">",
+      "  <select",
+      "    id=\"<%=app%>_$1\"",
+      "    name=\"$1\"",
+      "    data-tipo=\"select\"",
+      "    class=\"${3:obrigatorio}\"",
+      "    data-preenchimento=\"<%=$1%>\"",
+      "  >",
       "    <option value=\"\">Escolha um Item...</option>",
       "    <option value=\"F\">Feminino</option>",
       "    <option value=\"M\">Masculino</option>",
@@ -436,7 +442,15 @@
     "body": [
       "<li>",
       "  <label for=\"<%=app%>_${1:id_campo}\">${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}</label>",
-      "  <input id=\"<%=app%>_$1\" name=\"$1\" type=\"file\" data-tipo=\"upload\" data-extensoes=\"${3:png|jpeg|jpg|gif}\" class=\"${4:obrigatorio}\" data-tamanho=\"$5\"/>",
+      "  <input",
+      "    id=\"<%=app%>_$1\"",
+      "    name=\"$1\"",
+      "    type=\"file\"",
+      "    data-tipo=\"upload\"",
+      "    data-extensoes=\"${3:png|jpeg|jpg|gif}\"",
+      "    class=\"${4:obrigatorio}\"",
+      "    data-tamanho=\"$5\"",
+      "  />",
       "</li>",
       "$0"
     ],
@@ -491,7 +505,17 @@
     "body": [
       "<li>",
       "  <label for=\"<%=app%>_${1:observacoes}\">${2:Observações}</label>",
-      "  <textarea id=\"<%=app%>_$1\" name=\"$1\" class=\"${3:obrigatorio}\" cols=\"50\" rows=\"5\"${4: data-max=\"${5:500}\"} data-tipo=\"texto\"><%=$1%></textarea>",
+      "  <textarea",
+      "    id=\"<%=app%>_$1\"",
+      "    name=\"$1\"",
+      "    class=\"${3:obrigatorio}\"",
+      "    cols=\"50\"",
+      "    rows=\"5\"",
+      "    ${4:data-max=\"${5:500}\"}",
+      "    data-tipo=\"texto\"",
+      "  >",
+      "    <%=$1%>",
+      "  </textarea>",
       "</li>",
       "$0"
     ],
@@ -766,6 +790,22 @@
       "obj_json.flush : set obj_json = nothing"
     ]
   },
+  "rs-dados-select": {
+    "prefix": "ai-rs-dados-select",
+    "body": [
+      "set comando_sql = server.createobject(\"adodb.command\")",
+      "with comando_sql",
+      "  .activeconnection = ligacao",
+      "  .commandtext = \"SELECT ${1:id} AS value, ${2:value} AS text FROM radpfil_entidades_distribuicao WHERE $1 = ? ORDER BY $2\"",
+      "  'ai-parametro",
+      "  set rs_$2 = .execute",
+      "end with"
+    ]
+  },
+  "parametro": {
+    "prefix": "ai-parametro",
+    "body": ".parameters.append .createparameter(\"@${1:id}\", ${2:tipo_campo}, 1, ${3:tamanho_campo}, $1)"
+  },
   "Listar Dados": {
     "prefix": "ai-listar-sql",
     "body": [
@@ -817,6 +857,11 @@
     "body": "131",
     "description": "tipo campo numeric"
   },
+  "tipo de campo ASP - data": {
+    "prefix": "tipo_campo_data",
+    "body": "135",
+    "description": "tipo campo data"
+  },
   "tipo de campo ASP - varchar": {
     "prefix": "tipo_campo_varchar",
     "body": "200",
@@ -837,28 +882,57 @@
     "body": "$1 = rs_listar(\"$1\")",
     "description": "rs_listar campo"
   },
-  
   "IDU": {
     "prefix": "ai-idu",
     "body": [
       "set idu_obj = new idu_class",
       "",
-      "idu_obj.nome_campo = \"${1:campo_idu}\"",
-      "idu_obj.idu = ${2:variavel_idu}",
-      "idu_obj.pode_editar = ${3|false,true|}",
-      "idu_obj.aceita_ps = ${4|true,false|}",
-      "idu_obj.aceita_pc = ${5|false,true|}",
-      "idu_obj.separador_morada = ${6|true,false|}",
-      "idu_obj.separador_contactos = ${7|false,true|}",
-      "idu_obj.separador_documento_id = ${8|false,true|}",
-      "idu_obj.separador_id_complementar = ${9|false,true|}",
-      "idu_obj.separador_iban = ${10|false,true|}",
+      "idu_obj.nome_campo = \"${1:<%=app%>_idu}\"",
+      "idu_obj.idu = ${2:idu}",
       "",
       "idu_obj.start()",
-      "",
       "set idu_obj = nothing"
     ],
     "description": "IDU class"
+  },
+  "IDU-pode_editar": {
+    "prefix": "ai-idu-pode-editar",
+    "body": "idu_obj.pode_editar = ${1|false,true|}",
+    "description": "IDU class"
+  },
+  "IDU-aceita_ps": {
+    "prefix": "ai-idu-aceita-ps",
+    "body": "idu_obj.aceita_ps = ${1|true,false|}",
+    "description": "IDU class"
+  },
+  "IDU-aceita_pc": {
+    "prefix": "ai-idu-aceita-ps",
+    "body": "idu_obj.aceita_pc = ${1|true,false|}",
+    "description": "IDU class"
+  },
+  "IDU-separador_morada": {
+    "prefix": "ai-idu-separador-morada",
+    "body": "idu_obj.separador_morada = ${1|true,false|}",
+    "description": "IDU class"
+  },
+  "IDU-separador_contactos": {
+    "prefix": "ai-idu-separador-contactos",
+    "body": "idu_obj.separador_contactos = ${1|true,false|}",
+    "description": "IDU class"
+  },
+  "IDU-separador_documento_id": {
+    "prefix": "ai-idu-separador-documento-id",
+    "body": "idu_obj.separador_documento_id = ${1|true,false|}",
+    "description": "IDU class"
+  },
+  "IDU-separador_id_complementar": {
+    "prefix": "ai-idu-separador-id-complementar",
+    "body": "idu_obj.separador_id_complementar = ${1|true,false|}",
+    "description": "IDU class"
+  },
+  "IDU-separador_iban": {
+    "prefix": "ai-idu-separador-iban",
+    "body": "idu_obj.separador_iban = ${1|true,false|}",
+    "description": "IDU class"
   }
-  
 }

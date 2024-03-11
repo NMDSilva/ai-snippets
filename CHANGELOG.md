@@ -2,6 +2,9 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.29]
+- IDU desmenbrado
+
 ## [1.1.28]
 - Definição de scope em blocos de js e alteração de variáveis de connection strings
 
