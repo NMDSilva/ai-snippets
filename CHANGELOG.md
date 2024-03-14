@@ -2,6 +2,9 @@
 
 Todas as alterações "aisnippets"
 
+## [1.1.30]
+- Correções e ajustes
+
 ## [1.1.29]
 - IDU desmenbrado
 
